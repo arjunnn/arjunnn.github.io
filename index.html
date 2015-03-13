@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/instatofeed.min.js"></script>
-
+<script type="text/javascript">
+    var userFeed = new Instafeed({
+    get: 'user',
+    userId: 29708251,
+   	accessToken: '29708251.467ede5.86f570e5c5c44f099425928c8592abd6',
+   	useHTttp: true,
+    links: true,
+    limit:4,
+    sortBy:'most-liked',
+    resolution:'thumbnail'
+    //template: '<a href="{{link}}"><img src="http://{{image}}" /></a>'
+    });
+    userFeed.run();
+	</script>
 <head>
 	<title>Arjun Munji</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,27 +45,35 @@
 	<meta name="msapplication-square150x150logo" content="favicons/mstile-150x150.png" />
 	<meta name="msapplication-wide310x150logo" content="favicons/mstile-310x150.png" />
 	<meta name="msapplication-square310x310logo" content="favicons/mstile-310x310.png" />
-
 </head>
 <body>
 <style type="text/css">
-	p
-	{
+	p{
 		font-size: 1.5em;
 		line-height: 1.8em;
 		font-family:'Open Sans',sans-serif;
 	}
-	#name
-	{
+	#name{
 		padding-top: 20px;
 		font-family: 'Open Sans',sans-serif;
 	}
-	body
-	{
+	body{
 		margin: 1.5em;
 		text-decoration: none;
 	}
-	
+	.ig-b- { display: inline-block; }
+				.ig-b- img { visibility: visible; }
+				.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+				.ig-b-32 { width: 32px; height: 32px; background: url(https://badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
+				@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {.ig-b-32 { background-image: url(https://badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }	
+	#instafeed img {
+		padding: 1em;
+		opacity: 0.9;
+		filter:alpha(opacity-0.9);
+	}
+	#instafeed img:hover {
+		opacity: 1;
+	}
 </style>
 <div class="container-fluid" id="fullpage">
 	<div class="row" id="name">
@@ -90,28 +110,7 @@
 		<div class="col-sm-6">
 			<div id="instafeed"></div>
 			<div>
-			<script type="text/javascript">
-    var userFeed = new Instafeed({
-        get: 'user',
-        userId: 29708251,
-        accessToken: '29708251.467ede5.86f570e5c5c44f099425928c8592abd6',
-        useHTttp: true,
-        links: true,
-        limit:6,
-        sortBy:'most-recent',
-        resolution:'thumbnail'
-        template: '<a href="{{link}}"><img src="{{image}}" /></a>'
-    });
-    userFeed.run();
-</script>
-				<style>.ig-b- { display: inline-block; }
-				.ig-b- img { visibility: hidden; }
-				.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
-				.ig-b-32 { width: 32px; height: 32px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
-				@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-.ig-b-32 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }</style>
-				<a href="http://instagram.com/arjun1894?ref=badge" class="ig-b- ig-b-32"><img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
-
+				<a href="https://instagram.com/arjun1894?ref=badge" class="ig-b- ig-b-32"><img src="https://badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
 			</div>
 		</div>
 		<div class="col-sm-3"></div>
@@ -121,7 +120,7 @@
     	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    	})(window,document,'script','//http://www.google-analytics.com/analytics.js','ga');
    	   	ga('create', 'UA-59108954-2', 'auto');
    		ga('send', 'pageview');
 	</script>
