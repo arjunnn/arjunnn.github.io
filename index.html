@@ -10,7 +10,7 @@
    	useHTttp: true,
     links: true,
     limit:4,
-    sortBy:'most-liked',
+    sortBy:'most-recent',
     resolution:'thumbnail'
     //template: '<a href="{{link}}"><img src="http://{{image}}" /></a>'
     });
@@ -51,6 +51,9 @@
 	p{
 		font-size: 1.5em;
 		line-height: 1.8em;
+	}
+	body
+	{
 		font-family:'Open Sans',sans-serif;
 	}
 	#name{
@@ -62,17 +65,41 @@
 		text-decoration: none;
 	}
 	.ig-b- { display: inline-block; }
-				.ig-b- img { visibility: visible; }
-				.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
-				.ig-b-32 { width: 32px; height: 32px; background: url(https://badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
-				@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {.ig-b-32 { background-image: url(https://badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }	
+	.ig-b- img { visibility: visible; }
+	.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+	.ig-b-16 {width: 16px; height: 16px; /*background: url(//badges.instagram.com/static/images/ig-badge-sprite-16.png) no-repeat 0 0; */}
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+	.ig-b-16 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); background-size: 60px 178px; } 	
+}
+	#instafeed
+	{
+		position: center;
+	}
 	#instafeed img {
-		padding: 1em;
-		opacity: 0.9;
+		padding: .1em;
+		opacity: 0.95;
+		border:.09em solid #f2f2f2;
 		filter:alpha(opacity-0.9);
+		border-spacing: 1px
 	}
 	#instafeed img:hover {
 		opacity: 1;
+	}
+	.footer
+	{
+		vertical-align: center;
+		text-align: center;
+		opacity: .8;
+		font-size: 1.2em;
+		padding-top: 5em;
+	}
+	.footer a
+	{
+		color: black;
+	}
+	.footer a:hover
+	{
+		text-decoration: none;
 	}
 </style>
 <div class="container-fluid" id="fullpage">
@@ -87,7 +114,7 @@
   		<div class="col-sm-3"></div>
  		<div class="col-sm-6">
   			<h2><b>Hello</b></h2>
-  			<p>I study <abbr title="Computer Science">CS</abbr> at <abbr title="Keshav Memorial Institute Of Technology"><a href="http://kmit.in" target="_blank">KMIT</a></abbr>. I live in Hyderabad, India. I manage the design & development of <mark><a href="http://kmit.in/emagazine">kMITRA</a></mark>, our college magazine. I also dabble in graphic design and photography. Sometimes I <a href="http://blog.arjun.ninja">blog</a>.</p>
+  			<p>I study <abbr title="Computer Science">CS</abbr> at <abbr title="Keshav Memorial Institute Of Technology"><a href="http://kmit.in" target="_blank">KMIT</a></abbr>. I live in Hyderabad, India. I manage the design & development of <mark><a href="http://kmit.in/emagazine">kMITRA</a></mark>, our college magazine. I also dabble in graphic design and photography. Sometimes I <a href="http://blog.arjun.ninja">blog</a>.Twitter</p>
   			<p>
   				<blockquote>
   				(An Unmatched left paranthesis creates an unresolved tension that will stay with you all day.
@@ -100,7 +127,7 @@
 	<div class="row" id="contact">
 	<div class="col-sm-3"></div>
 	<div class="col-sm-6">
-		<p>You can contact me via <a href="http://facebook.com/arjun.munji" target="_blank">facebook</a>, <a href="http://twitter.com/arjundot" target="_blank">twitter</a> and <a href=" mailto:arjunmunji@hotmail.com" target="_blank">email.</a></p>
+		<p>You can contact me via <a href=" mailto:arjunmunji@gmail.com" target="_blank">email</a>.</p>
     </div>
 	</div>
 	<div class="col-sm-3"></div>
@@ -109,9 +136,17 @@
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
 			<div id="instafeed"></div>
+			<div></div>
 			<div>
-				<a href="https://instagram.com/arjun1894?ref=badge" class="ig-b- ig-b-32"><img src="https://badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
+				<a href="https://instagram.com/arjun1894?ref=badge" class="ig-b- ig-b-16"><img src="https://badges.instagram.com/static/images/ig-badge-16.png" alt="Instagram"></a> <a href="http://instagr.am/arjun1894"><strong>Follow @arjun1894</strong></a>
 			</div>
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6" align="center" >
+			<p class="footer">&copy; 2015 <a href="http://arjun.ninja">Arjun Munji</a></p>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
