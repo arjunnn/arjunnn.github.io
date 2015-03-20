@@ -1,16 +1,52 @@
-<!DOCTYPE html>
-<html>
+<DOCTYPE html>
 <head>
+	<meta charset="UTF-8">
 	<title>Arjun</title>
+<script type="text/javascript" src="assets/last.fm.api.js"></script>
+<script type="text/javascript" src="assets/lastfm.api.md5.js"></script>
+<script type="text/javascript" src="assets/lastfm.api.cache.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 <style type="text/css">
-	h1
+	body
 	{
-		vertical-align: center;
 		font-family: Helvetica;
 	}
 </style>
 <h1 align="center">Hello World</h1>
+<script type="text/javascript">
+var cache = new LastFMCache();
+var lastfm = new LastFM({
+  apiKey    : 'f21088bf9097b49ad4e7f487abab981e',
+  apiSecret : '7ccaec2093e33cded282ec7bc81c6fca',
+  cache     : cache
+});
+
+lastfm.user.getRecentTracks({user: 'arjun1894'}, {success: function(data){
+	//console.log("success");
+	//console.log(data);
+	for(i=0;i<10;i++)
+	{
+		var track= document.createElement('p');
+		var album= document.createElement('p');
+		var artist= document.createElement('p');
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+(i+1)+" <i><strong>"+data.recenttracks.track[i].name+"</strong></i>";
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+"<i>from</i> "+data.recenttracks.track[i].album["#text"];
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+"<i>by</i> "+data.recenttracks.track[i].artist["#text"];
+	 // var image = document.createElement('img'+i);
+	 // document.getElementById("cover"+i).appendChild(image);  
+	 // image.src = "data:recenttracks.track[i].image[i]/png;base64," + data.recenttracks.track[i].image[1]["#text"];
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+'</br>'
+	};
+
+}, error: function(code, message){
+console.log(code);	
+console.log(message);	
+}});
+</script>
+<div>
+	<p id="content"></p>
+</div>
 </body>
 </html>
