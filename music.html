@@ -82,20 +82,21 @@ lastfm.user.getRecentTracks({user: 'arjun1894'}, {success: function(data){
 		var track= document.createElement('p');
 		var album= document.createElement('p');
 		var artist= document.createElement('p');
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+(i+1)+" <i><strong>"+data.recenttracks.track[i].name+"</strong></i>";
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+(i+1)+ ".<strong> "+data.recenttracks.track[i].name+"</strong>";
 	if(data.recenttracks.track[i].album["#text"]==null)
 	{
 		break;
 	}
 	else{
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+"<i>from</i> "+data.recenttracks.track[i].album["#text"];}
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+"<i>by</i> "+data.recenttracks.track[i].artist["#text"];
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+"<i>from</i> <strong> "+data.recenttracks.track[i].album["#text"]+"</strong>";}
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+"<i>by</i> <strong> "+data.recenttracks.track[i].artist["#text"]+'</strong>';
 	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+'</br>'
 
 	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'<img align="center" src="'+data.recenttracks.track[i].image[3]["#text"]+'">'
 	 // var image = document.createElement('img'+i);
 	 // document.getElementById("cover"+i).appendChild(image);  
 	 // image.src = "data:recenttracks.track[i].image[i]/png;base64," + data.recenttracks.track[i].image[1]["#text"];
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+'</br>'
 	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+'</br>'
 	};
 
