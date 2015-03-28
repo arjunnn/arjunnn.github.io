@@ -1,10 +1,11 @@
 #instafeed a {
+position:center;
   padding:5px 5px 1px 5px;
   margin:5px;
   border:1px solid #e1e1e1;
   display:inline-block;
   border-radius: 4px;
-  position:relative;
+  position:center;
 }
 #instafeed .likes {
   font-family:'Open Sans';
