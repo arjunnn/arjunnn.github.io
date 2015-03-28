@@ -2,19 +2,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/style.css">
 <script type="text/javascript" src="assets/instatofeed.min.js"></script>
 <script type="text/javascript">
     var userFeed = new Instafeed({
     get: 'user',
     userId: 29708251,
    	accessToken: '29708251.467ede5.86f570e5c5c44f099425928c8592abd6',
-   	useHTttp: true,
+   	useHttp: true,
     links: true,
-    limit:8,
+    mock: false,
+    limit:9,
     sortBy:'most-recent',
-    resolution:'thumbnail'
-    //template: '<a href="{{link}}"><img src="http://{{image}}" /></a>'
-    });
+    resolution:'thumbnail',
+    template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&#x1f497; {{likes}}</div></a>'
+   	});
     userFeed.run();
 	</script>
 <head>
@@ -48,61 +50,7 @@
 	<meta name="msapplication-square310x310logo" content="favicons/mstile-310x310.png" />
 </head>
 <body>
-<style type="text/css">
-	p{
-		font-size: 1.5em;
-		line-height: 1.8em;
-	}
-	body
-	{
-		font-family:'Open Sans',sans-serif;
-	}
-	#name{
-		padding-top: 20px;
-		font-family: 'Open Sans',sans-serif;
-	}
-	body{
-		margin: 1.5em;
-		text-decoration: none;
-	}
-	.ig-b- { display: inline-block; }
-	.ig-b- img { visibility: visible; }
-	.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
-	.ig-b-16 {width: 16px; height: 16px; /*background: url(//badges.instagram.com/static/images/ig-badge-sprite-16.png) no-repeat 0 0; */}
-	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-	.ig-b-16 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); background-size: 60px 178px; } 	
-	}
-	#instafeed
-	{
-		position: center;
-	}
-	#instafeed img {
-		padding: .1em;
-		opacity: 0.95;
-		border:.09em solid #f2f2f2;
-		filter:alpha(opacity-0.9);
-		border-spacing: 1px
-	}
-	#instafeed img:hover {
-		opacity: 1;
-	}
-	.footer
-	{
-		vertical-align: center;
-		text-align: center;
-		opacity: .8;
-		font-size: 1.2em;
-		padding-top: 5em;
-	}
-	.footer a
-	{
-		color: black;
-	}
-	.footer a:hover
-	{
-		text-decoration: none;
-	}
-</style>
+
 <div class="container-fluid" id="fullpage">
 	<div class="row" id="name">
 	<div class="col-sm-3"></div>
@@ -139,10 +87,10 @@
 			<h3><strong>Recent Work</strong></h4>
 				<ul>
 					<li>
-						<p><a href="http://arjun.ninja/music">What I'm listening to</a> &#8212; A page designed to display the most recent songs that I have listened to, on any device. </li></p>
+						<p><a href="http://arjun.ninja/music">What I'm listening to</a> &mdash; A page designed to display the most recent songs that I have listened to, on any device. </li></p>
 					</li>
 					<li>
-						<p><a href="http://kmit.in/emagazine/oscars">The Oscars | kMITRA</a> &#8212; Created a special Oscars themed page for kMITRA.</p>
+						<p><a href="http://kmit.in/emagazine/oscars">The Oscars | kMITRA</a> &mdash; Created a special Oscars themed page for kMITRA.</p>
 					</li>
 				</ul> 
 		</div>
@@ -152,7 +100,7 @@
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
 			<div id="instafeed"><h3><strong>Instagram</h3></strong></div>
-			<div>
+			<div id="instaFollow">
 				<a href="https://instagram.com/arjun1894?ref=badge" class="ig-b- ig-b-16"><img src="https://badges.instagram.com/static/images/ig-badge-16.png" alt="Instagram"></a> <a href="http://instagr.am/arjun1894"><strong>Follow @arjun1894</strong></a>
 			</div>
 		</div>
@@ -161,7 +109,7 @@
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6" align="center" >
-			<p class="footer">&copy; 2015 <a href="http://arjun.ninja">Arjun Munji</a></p>
+			<p class="footer">&copy; 2015 <a href="http://arjun.ninja">Arjun Munji</a> | Hosted on GitHub &#x1f497;</p>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>

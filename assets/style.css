@@ -1,0 +1,89 @@
+#instafeed a {
+  padding:5px 5px 1px 5px;
+  margin:5px;
+  border:1px solid #e1e1e1;
+  display:inline-block;
+  border-radius: 4px;
+  position:relative;
+}
+#instafeed .likes {
+  font-family:'Open Sans';
+  font-size:1em;
+  position:relative;
+  padding-bottom: .5em;
+  color:inherit;
+  right:5px;
+  top:5px;
+  left:5px;
+  opacity:1;
+  text-align:center;
+  line-height:inherit;
+  text-shadow:0 1px rgba(0,0,0,0.5);
+  -webkit-font-smoothing:antialiased;
+  -webkit-transition: opacity 100ms ease;
+	-moz-transition: opacity 100ms ease;
+	-o-transition: opacity 100ms ease;
+	-ms-transition: opacity 100ms ease;
+	transition: opacity 100ms ease;
+}
+#instafeed a:hover {
+  opacity:1;
+  text-decoration: none;
+}
+	p{
+		font-size: 1.5em;
+		line-height: 1.8em;
+	}
+	body
+	{
+		font-family:'Open Sans',sans-serif;
+	}
+	#name{
+		padding-top: 20px;
+		font-family: 'Open Sans',sans-serif;
+	}
+	body{
+		margin: 1.5em;
+		text-decoration: none;
+	}
+	.ig-b- { display: inline-block; }
+	.ig-b- img { visibility: hidden; }
+	.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+	.ig-b-16 {width: 16px; height: 16px; background: url(http://badges.instagram.com/static/images/ig-badge-sprite-16.png) no-repeat 0 0; }
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+	.ig-b-16 { background-image: url(http://badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); background-size: 60px 178px; } 	
+	}
+	#instafeed
+	{
+		position: center;
+	}
+	#instafeed img {
+		padding: .1em;
+		opacity: 0.95;
+		border:.09em solid #f2f2f2;
+		filter:alpha(opacity-0.9);
+		border-spacing: 1px
+	}
+	#instafeed img:hover {
+		opacity: 1;
+	}
+	.footer
+	{
+		vertical-align: center;
+		text-align: center;
+		opacity: .8;
+		font-size: 1.2em;
+		padding-top: 5em;
+	}
+	.footer a
+	{
+		color: black;
+	}
+	.footer a:hover
+	{
+		text-decoration: none;
+	}
+	#instaFollow
+	{
+		padding-left: .5em;
+	}

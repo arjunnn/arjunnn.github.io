@@ -119,7 +119,7 @@ lastfm.user.getTopArtists({user: me}, {success: function(data){
 	console.log("success");
 	console.log(data);
 	for(i=0;i<10;i++){
-	document.getElementById("artist").innerHTML=document.getElementById("artist").innerHTML+'</br>'+'<strong>'+data.topartists.artist[i].name+'</strong> &#8212; ';
+	document.getElementById("artist").innerHTML=document.getElementById("artist").innerHTML+'</br>'+'<strong>'+data.topartists.artist[i].name+'</strong> &mdash; ';
 	document.getElementById("artist").innerHTML=document.getElementById("artist").innerHTML+'<strong>'+data.topartists.artist[i].playcount+'</strong> plays.';}
 }, error: function(code, message){
 	console.log(code);
@@ -147,7 +147,7 @@ lastfm.user.getTopArtists({user: me}, {success: function(data){
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6" align="center">
-			<h1><small>Artists I &lt;3</small></h1>
+			<h1><small>Artists I like</small></h1>
 			<p id="artist"></p>
 		</div>
 		<div class="col-sm-3"></div>
@@ -155,7 +155,7 @@ lastfm.user.getTopArtists({user: me}, {success: function(data){
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6" align="center" >
-			<p class="footer">&copy; 2015 <a href="http://arjun.ninja">Arjun Munji</a></p>
+			<p class="footer">&copy; 2015 <a href="http://arjun.ninja">Arjun Munji</a> | Hosted on GitHub &#x1f497;</p>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
