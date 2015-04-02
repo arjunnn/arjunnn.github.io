@@ -15,7 +15,7 @@
     limit:8,
     sortBy:'most-recent',
     resolution:'thumbnail',
-    template: '<a href="{{link}}" target="_blank"><img src="{{image}}"title="{{caption}}"/><div class="likes">&#x1f497; {{likes}}</div></a>'
+    template: '<a href="{{link}}" target="_blank"><img src="{{image}}"title="{{caption}}"/><div class="likes"><span id="heart">&#x1f497;</span>&nbsp;{{likes}}</div></a>'
    	});
     userFeed.run();
 	</script>
@@ -52,18 +52,18 @@
 <body>
 
 <div class="container-fluid" id="fullpage">
-	<div class="row" id="name">
+	<div class="row">
 	<div class="col-sm-3"></div>
-	<div class="col-sm-6">
-		<h1 class="page-header"><b>Hi, I'm Arjun</b></h1>
+	<div class="col-sm-6" id="name">
+		<h1 class="page-header"><strong>Hi, I'm Arjun</strong></h1>
 	</div>
 	<div class="col-sm-3"></div>
 	</div>
-	<div class="row" id="home">
+	<div class="row">
   		<div class="col-sm-3"></div>
  		<div class="col-sm-6">
-  			<h2><b>Hello</b></h2>
-  			<p>I study <abbr title="Computer Science">CS</abbr> at <abbr title="Keshav Memorial Institute Of Technology"><a href="http://kmit.in" target="_blank">KMIT</a></abbr>. I live in Hyderabad, India. I manage the design & development of <mark><a href="http://kmit.in/emagazine" target="_blank">kMITRA</a></mark>, our college magazine. I also dabble in graphic design and photography. Sometimes I <a href="http://blog.arjun.ninja">blog</a>.</p>
+  			<h2 id="hello"><strong>Hello</strong></h2>
+  			<p>I am a <abbr title="Computer Science">CS</abbr> undergrad at <abbr title="Keshav Memorial Institute Of Technology"><a href="http://kmit.in" target="_blank">KMIT</a></abbr>. I live in Hyderabad, India. I manage the design & development of <mark><a href="http://kmit.in/emagazine" target="_blank">kMITRA</a></mark>, our college magazine. I also dabble in graphic design and photography. Sometimes I <a href="http://blog.arjun.ninja">blog</a>.</p>
   			<p>
   				<blockquote>
   				(An Unmatched left paranthesis creates an unresolved tension that will stay with you all day.
@@ -76,15 +76,15 @@
 	<div class="row" id="contact">
 	<div class="col-sm-3"></div>
 	<div class="col-sm-6">
-		<p>You can contact me via <a href=" mailto:arjunmunji@gmail.com" target="_blank">email</a>.</p>
+		<p>You can contact me via <a href="mailto:arjunmunji@gmail.com" target="_blank">email</a>.</p>
     </div>
 	</div>
 	<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
-		<div class="col-sm-6">
-			<h3><strong>Recent Work</strong></h4>
+		<div class="col-sm-6" id="recentwork">
+			<h2><strong>Recent Work</strong></h2>
 				<ul>
 					<li>
 						<p><a href="http://arjun.ninja/music">What I'm listening to</a> &mdash; A page designed to display the most recent songs that I have listened to, & my favorite artists, updated in realtime.</li></p>
@@ -101,8 +101,8 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
-		<div class="col-sm-7">
-			<div id="instafeed"><h3><strong>Instagram</h3></strong></div>
+		<div class="col-sm-7" id="instagram">
+			<div id="instafeed"><h2><strong>Instagram</strong></h2></div>
 			<div id="instaFollow">
 				<a href="https://instagram.com/arjun1894?ref=badge" class="ig-b- ig-b-16"><img src="https://badges.instagram.com/static/images/ig-badge-16.png" alt="Instagram"></a> <a href="http://instagr.am/arjun1894"><strong>Follow @arjun1894</strong></a>
 			</div>
@@ -112,7 +112,7 @@
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6" align="center">
-			<p class="footer">&copy; 2015 <a href="http://arjun.ninja">Arjun Munji</a> | Hosted on GitHub &#x1f497;</p>
+			<p class="footer">&copy; 2015 <a href="http://arjun.ninja">Arjun Munji</a> | Hosted on GitHub <a id="heart" href="https://github.com/arjunnn/arjunnn.github.io/">&#x1f497;</a></p>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>

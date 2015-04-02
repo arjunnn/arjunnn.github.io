@@ -35,24 +35,24 @@ position:center;
 		font-size: 1.5em;
 		line-height: 1.8em;
 	}
-	body
-	{
-		font-family:'Open Sans',sans-serif;
-	}
-	#name{
-		padding-top: 20px;
+	#name,#hello,#contact,#recentwork,#instagram,.footer{
 		font-family: 'Open Sans',sans-serif;
+	}
+	#name
+	{
+		padding-top: 1.5em;
 	}
 	body{
 		margin: 1.5em;
-		text-decoration: none;
+		font-family: 'Open Sans',sans-serif;
+		/*text-decoration: none;*/
 	}
 	.ig-b- { display: inline-block; }
 	.ig-b- img { visibility: hidden; }
 	.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
-	.ig-b-16 {width: 16px; height: 16px; background: url(http://badges.instagram.com/static/images/ig-badge-sprite-16.png) no-repeat 0 0; }
+	.ig-b-16 {width: 16px; height: 16px; background: url(https://badges.instagram.com/static/images/ig-badge-sprite-16.png) no-repeat 0 0; }
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-	.ig-b-16 { background-image: url(http://badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); background-size: 60px 178px; } 	
+	.ig-b-16 { background-image: url(https://badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); background-size: 60px 178px; } 	
 	}
 	#instafeed
 	{
@@ -87,4 +87,12 @@ position:center;
 	#instaFollow
 	{
 		padding-left: .5em;
+	}
+	#heart
+	{
+		text-decoration: none;
+	}
+	#heart:hover
+	{
+		color: red;
 	}
