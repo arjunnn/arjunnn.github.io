@@ -48,6 +48,12 @@ position:center;
 		font-family: 'Open Sans',sans-serif;
 		/*text-decoration: none;*/
 	}
+	#github-logo
+	{
+		max-height: 16px;
+		max-width: 16px;
+		vertical-align: baseline; 
+	}
 	.ig-b- { display: inline-block; }
 	.ig-b- img { visibility: hidden; }
 	.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
@@ -64,7 +70,9 @@ position:center;
 		opacity: 0.95;
 		border:.09em solid #f2f2f2;
 		filter:alpha(opacity-0.9);
-		border-spacing: 1px
+		/*border-spacing: 1px;*/
+    
+}
 	}
 	#instafeed img:hover {
 		opacity: 1;
