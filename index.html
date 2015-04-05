@@ -3,6 +3,7 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script type="text/javascript" src="assets/instatofeed.min.js"></script>
+<script type="text/javascript" src="assets/konami.js"></script>
 <script type="text/javascript">
     var userFeed = new Instafeed({
     get: 'user',
@@ -17,13 +18,6 @@
     template: '<a href="{{link}}" target="_blank"><img src="{{image}}"title="{{caption}}"/><div class="likes"><span id="heart">&#x1f497;</span>&nbsp;{{likes}}</div></a>'
    	});
     userFeed.run();
-</script>
-<script src="http://cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"></script>
-<script  type="text/javascript">
-  cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
-  var d = document.getElementById("d1");
-  d.setAttribute("align", "center");
-});
 </script>
 
 <head>
@@ -57,7 +51,11 @@
 	<meta name="msapplication-square310x310logo" content="favicons/mstile-310x310.png" />
 </head>
 <body>
-
+<div id="easteregg"></div>
+<!-- <script src="http://cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"></script> -->
+<script  type="text/javascript">
+var easter_egg = new Konami(function() { alert('Konami code!');document.getElementById('easteregg').innerHTML = '<div style="position: fixed; z-index: -120; width: 100%; height: 120%"><iframe src="https://www.youtube.com/embed/y6120QOlsfU?loop=1&autoplay=1" frameborder="0" height="100%" width="100%" allowfullscreen></iframe></div>';});
+</script>
 <div class="container-fluid" id="fullpage">
 	<div class="row">
 	<div class="col-sm-3"></div>
@@ -124,6 +122,7 @@
 		<div class="col-sm-3"></div>
 	</div>
 </div>
+<div id="easteregg"></div>
 	<script>
     	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
