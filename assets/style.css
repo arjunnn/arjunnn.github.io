@@ -114,10 +114,13 @@ position:center;
 		background-color: #fff
 		color: red;
 	}
+	#face-container
+	{
+		position: relative; ;
+	}
 	#mahface
 	{
-		max-height:175px;
-		vertical-align: inherit;
-		position: relative;
-		padding-bottom: 0px;
+		max-height: 175px;
+		display:block;
+   		margin:auto;
 	}
