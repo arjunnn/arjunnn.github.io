@@ -1,11 +1,15 @@
 #instafeed a {
 position:center;
-  padding:5px 5px 1px 5px;
-  margin:5px;
+  padding:3px 3px 1px 3px;
+  margin:3px;
   border:1px solid #e1e1e1;
   display:inline-block;
   border-radius: 4px;
   position:center;
+}
+#instafeed{
+	display: block;
+  margin: auto;
 }
 #instafeed .likes {
   font-family:'Open Sans';
@@ -18,7 +22,7 @@ position:center;
   left:5px;
   opacity:1;
   text-align:center;
-  line-height:inherit;
+  line-height:1em;
   /*text-shadow:0 1px rgba(0,0,0,0.5);*/
   -webkit-font-smoothing:antialiased;
   -webkit-transition: opacity 100ms ease;
@@ -69,16 +73,13 @@ position:center;
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 	.ig-b-16 { background-image: url(https://badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); background-size: 60px 178px; } 	
 	}
-	#instafeed
-	{
-		position: center;
-	}
 	#instafeed img {
 		padding: .1em;
 		opacity: 0.95;
 		border:.09em solid #f2f2f2;
 		filter:alpha(opacity-0.9);
-		/*border-spacing: 1px;*/
+		margin: auto;
+		display: block;
     
 }
 	}
