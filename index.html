@@ -1,54 +1,37 @@
 <!DOCTYPE html>
+<script type="text/javascript" src="assets/javascript.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,700italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="assets/style.css">
 <script type="text/javascript" src="assets/instatofeed.min.js"></script>
 <script type="text/javascript" src="assets/konami.js"></script>
 <script type="text/javascript">
-    var userFeed = new Instafeed({
+	var userFeed = new Instafeed({
     get: 'user',
     userId: 29708251,
-   	accessToken: '29708251.467ede5.86f570e5c5c44f099425928c8592abd6',
-   	useHttp: true,
+    accessToken: '29708251.467ede5.86f570e5c5c44f099425928c8592abd6',
+    useHttp: true,
     links: true,
     mock: false,
     limit:8,
     sortBy:'most-recent',
     resolution:'thumbnail',
     template: '<a href="{{link}}" target="_blank"><img src="{{image}}"title="{{caption}}"/><div class="likes"><span id="heart">&#x1f497;</span>&nbsp;{{likes}}</div></a>'
-   	});
+    });
     userFeed.run();
 </script>
-
 <head>
 	<title>Arjun Munji</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta name="description" content="Arjun Munji">
-	<meta name="keywords" content="Arjun,Munji,KMIT">
+	<meta name="keywords" content="arjun, munji, kmit, kmitra, kmit.in, hyderabad">
 	<meta name="author" content="Arjun Munji">
-  	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="assets/style.css">
-  	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicons/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicons/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicons/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicons/apple-touch-icon-60x60.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicons/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicons/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicons/apple-touch-icon-152x152.png" />
-	<link rel="icon" type="image/png" href="favicons/favicon-196x196.png" sizes="196x196" />
-	<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="favicons/favicon-128.png" sizes="128x128" />
-	<meta name="application-name" content="&nbsp;"/>
-	<meta name="msapplication-TileColor" content="#FFFFFF" />
-	<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png" />
-	<meta name="msapplication-square70x70logo" content="favicons/mstile-70x70.png" />
-	<meta name="msapplication-square150x150logo" content="favicons/mstile-150x150.png" />
-	<meta name="msapplication-wide310x150logo" content="favicons/mstile-310x150.png" />
-	<meta name="msapplication-square310x310logo" content="favicons/mstile-310x310.png" />
 </head>
 <body>
 <div id="easteregg"></div>
@@ -58,6 +41,13 @@ var easter_egg = new Konami(function() { alert('Konami code!');document.getEleme
 </script>
 <div class="container-fluid" id="fullpage">
 	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6" id="hero">
+			<span id="log">Good </span><br/><span>My name is</span>
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+	<div class="row" id="name-header">
 	<div class="col-sm-3"></div>
 	<div class="col-sm-3" id="name">
 		<h1 class="page-header"><strong>Arjun Munji</strong></h1>
