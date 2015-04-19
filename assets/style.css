@@ -12,7 +12,7 @@ position:center;
   margin: auto;
 }
 #instafeed .likes {
-  font-family:'Open Sans';
+  font-family:'Open Sans', snas;
   font-size:1em;
   position:relative;
   padding-bottom: .5em;
@@ -77,12 +77,12 @@ position:center;
 	.ig-b-16 { background-image: url(https://badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); background-size: 60px 178px; } 	
 	}
 	#instafeed img {
-		padding: .1em;
+		padding: 0em;
 		opacity: 0.95;
 		border:.09em solid #f2f2f2;
 		filter:alpha(opacity-0.9);
 		margin: auto;
-		display: block;
+		display: inline-block;
     
 }
 	}
@@ -108,6 +108,7 @@ position:center;
 	#instaFollow
 	{
 		padding-left: .5em;
+		padding-top: .5em;
 	}
 	#heart
 	{
@@ -143,4 +144,4 @@ position:center;
 		font-weight: 700;
 		font-family: 'Arvo';
 		text-transform: uppercase;
-	}
+	}f
