@@ -115,16 +115,22 @@ console.log(code);
 console.log(message);	
 }});
 
-lastfm.user.getTopArtists({user: me}, {success: function(data){
+lastfm.user.getTopArtists({user: me}, {success: function(data)
+{
 	console.log("success");
 	console.log(data);
-	for(i=0;i<10;i++){
-	document.getElementById("artist").innerHTML=document.getElementById("artist").innerHTML+'</br>'+'<strong>'+data.topartists.artist[i].name+'</strong> &mdash; ';
-	document.getElementById("artist").innerHTML=document.getElementById("artist").innerHTML+'<strong>'+data.topartists.artist[i].playcount+'</strong> plays.';}
-}, error: function(code, message){
+	for(i=0;i<10;i++)
+	{
+		document.getElementById("artist").innerHTML=document.getElementById("artist").innerHTML+'</br>'+'<strong>'+data.topartists.artist[i].name+'</strong> &mdash; ';
+		document.getElementById("artist").innerHTML=document.getElementById("artist").innerHTML+'<strong>'+data.topartists.artist[i].playcount+'</strong> plays.';
+	}
+},
+error: function(code, message)
+{
 	console.log(code);
 	console.log(message);
-}});
+}
+});
 
 </script>
 <body>
