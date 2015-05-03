@@ -144,4 +144,19 @@ position:center;
 		font-weight: 700;
 		font-family: 'Arvo';
 		text-transform: uppercase;
-	}f
+	}
+::-moz-selection { /* Code for Firefox */
+	color: black;
+	background: yellow;
+}
+
+::selection {
+    color: black;
+    background: yellow;
+}
+#mahface, #footer, #instagram{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	align-content: center;
+}
