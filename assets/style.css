@@ -67,14 +67,14 @@ position:center;
 	{
 		max-height: 16px;
 		max-width: 16px;
-		vertical-align: baseline; 
+		vertical-align: baseline;
 	}
 	.ig-b- { display: inline-block; }
 	.ig-b- img { visibility: hidden; }
 	.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
 	.ig-b-16 {width: 16px; height: 16px; background: url(https://badges.instagram.com/static/images/ig-badge-sprite-16.png) no-repeat 0 0; }
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-	.ig-b-16 { background-image: url(https://badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); background-size: 60px 178px; } 	
+	.ig-b-16 { background-image: url(https://badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); background-size: 60px 178px; }
 	}
 	#instafeed img {
 		padding: 0em;
@@ -83,7 +83,7 @@ position:center;
 		filter:alpha(opacity-0.9);
 		margin: auto;
 		display: inline-block;
-    
+
 }
 	}
 	#instafeed img:hover {
@@ -159,4 +159,18 @@ position:center;
 	margin-right: auto;
 	text-align: center;
 	align-content: center;
+}
+.link a {
+    background-color: yellow;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration: none;
+    color: white;
+}
+.link a:hover {
+  /*color:grey;*/
+  background-color: black;
 }
