@@ -161,16 +161,29 @@ position:center;
 	align-content: center;
 }
 .link a {
-    background-color: yellow;
+  background-color: white;
+  color: #428bca;
+    /*border: 1px solid #428bca;*/
+
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     padding-left:5px;
     padding-right:5px;
     text-decoration: none;
-    color: white;
+    transition: background-color 0.3s ease;
+     -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
 }
 .link a:hover {
   /*color:grey;*/
-  background-color: black;
+  -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   background-color: #428bca;
+
+   color: white;
+
 }
