@@ -85,39 +85,73 @@ var lastfm = new LastFM({
   cache     : cache
 });
 
+
+
 lastfm.user.getRecentTracks({user: me}, {success: function(data){
 	//console.log("success");
-	//console.log(data);
+	// console.log(data);
 	for(i=0;i<10;i++)
 	{
-		var track= document.createElement('p');
-		var album= document.createElement('p');
-		var artist= document.createElement('p');
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+(i+1)+ ".<strong> "+data.recenttracks.track[i].name+"</strong>";
+		// var track= document.createElement('p');
+		// var album= document.createElement('p');
+		// var artist= document.createElement('p');
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+(i+1)+ ".<strong>&nbsp;"+data.recenttracks.track[i].name+"</strong>";
 	if(data.recenttracks.track[i].album["#text"]==null)
 	{
 		break;
 	}
 	else{
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+"<i>from</i> <strong> "+data.recenttracks.track[i].album["#text"]+"</strong>";}
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+"<i>by</i> <strong> "+data.recenttracks.track[i].artist["#text"]+'</strong>';
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+'</br>'
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br><i>from&nbsp;</i><strong>'+data.recenttracks.track[i].album["#text"]+"</strong>";
+	}
 
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'<img align="center" src="'+data.recenttracks.track[i].image[3]["#text"]+'">'
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br><i>by&nbsp;</i><strong>'+data.recenttracks.track[i].artist["#text"]+'</strong>';
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br></br>'
+
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'<a href="'+data.recenttracks.track[i].url+'"><img align="center" src="'+data.recenttracks.track[i].image[3]["#text"]+'"></a>'
 	 // var image = document.createElement('img'+i);
-	 // document.getElementById("cover"+i).appendChild(image);  
+	 // document.getElementById("cover"+i).appendChild(image);
 	 // image.src = "data:recenttracks.track[i].image[i]/png;base64," + data.recenttracks.track[i].image[1]["#text"];
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+'</br>'
-	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br>'+'</br>'
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br></br>'
+	document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+'</br></br>'
 	};
 }, error: function(code, message){
-console.log(code);	
-console.log(message);	
+console.log(code);
+console.log(message);
 }});
+
+lastfm.user.getWeeklyTrackChart({user: me}, {success: function(data){
+	// console.log(data);
+	// var numberOfTracks = data.weeklytrackchart.track.length;
+	// console.log(numberOfTracks);
+	for (var i = 0; i < data.weeklytrackchart.track.length; i++) {
+		// console.log("loop entered");
+		// console.log(i);
+		document.getElementById('trackTable').innerHTML=document.getElementById('trackTable').innerHTML+'<tr><td><strong>&nbsp;'+data.weeklytrackchart.track[i].name+'</strong></td><td><strong>&nbsp;'+data.weeklytrackchart.track[i].artist['#text']+'</strong></td><td><strong>&nbsp;'+data.weeklytrackchart.track[i].playcount+'</strong></td></tr>';
+		// if (data.weeklytrackchart.track[i].playcount > 1) {
+		// 	document.getElementById("weekly").innerHTML=document.getElementById("weekly").innerHTML+'played&nbsp;'+data.weeklytrackchart.track[i].playcount+'&nbsp;times</li>';
+		// }
+		// else {
+		// 	document.getElementById("weekly").innerHTML=document.getElementById("weekly").innerHTML+'played&nbsp;'+data.weeklytrackchart.track[i].playcount+'&nbsp;time</li>';
+		// }
+		// document.getElementById("weekly").innerHTML=document.getElementById("weekly").innerHTML+'<a href="'+data.weeklytrackchart.track[i].url+'"><img align="center" src="'+data.weeklytrackchart.track[i].image[2]["#text"]+'"></a>'
+		// document.getElementById("weekly").innerHTML=document.getElementById("weekly").innerHTML+data.weeklytrackchart;
+	}
+}, error: function(code, message){
+	console.log(code);
+	console.log(message);
+}});
+
+// lastfm.user.getTopTracks({user: me}, {success: function(data){
+// 	console.log(data);
+//
+// }, error: function(code, message){
+// 	console.log(code);
+// 	console.log(message);
+// }});
 
 lastfm.user.getTopArtists({user: me}, {success: function(data)
 {
-	console.log("success");
+	// console.log("success");
 	console.log(data);
 	for(i=0;i<10;i++)
 	{
@@ -153,6 +187,31 @@ error: function(code, message)
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6" align="center">
+			<h1><small>Weekly Top Tracks</small></h1>
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>
+							Name
+						</th>
+						<th>
+							Artist
+						</th>
+						<th>
+							Plays
+						</th>
+					</tr>
+				</thead>
+				<tbody id="trackTable">
+
+				</tbody>
+			</table>
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6" align="center">
 			<h1><small>Artists I like</small></h1>
 			<p id="artist"></p>
 		</div>
@@ -165,6 +224,6 @@ error: function(code, message)
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
-</div>	
+</div>
 </body>
 </html>
