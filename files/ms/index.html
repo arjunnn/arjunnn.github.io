@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>firstmid</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(29, 31, 33); overflow: auto; background-color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(67, 72, 76); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(29, 31, 33); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(67, 72, 76); border-color: rgb(214, 214, 214); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(214, 214, 214); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(214, 214, 214); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(0, 0, 0); background-color: rgb(240, 240, 240); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(245, 245, 245); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(0, 0, 0); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(214, 214, 214) rgb(214, 214, 214) rgb(199, 199, 199); background-color: rgb(240, 240, 240); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.markdown-preview.markdown-preview { font-family: Hack; font-size: 1.5em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+
+pre.editor-colors,
+.host {
+  background-color: #ffffff;
+  color: #1d1f21;
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: #e0e0e0;
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: #e0e0e0;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: #c5c8c6;
+}
+pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #ffffff;
+  color: #b4b7b4;
+}
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  padding: 0 0.25em 0 0.5em;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  background-color: #e0e0e0;
+  color: #373b41;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  color: #373b41;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #b4b7b4;
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #1d1f21;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  color: #1d1f21;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #e0e0e0;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-color: #b4b7b4;
+}
+.comment {
+  color: #969896;
+}
+.entity.name.type {
+  color: #f0c674;
+}
+.entity.other.inherited-class {
+  color: #b5bd68;
+}
+.keyword {
+  color: #b294bb;
+}
+.keyword.control {
+  color: #b294bb;
+}
+.keyword.operator {
+  color: #1d1f21;
+}
+.keyword.other.special-method {
+  color: #81a2be;
+}
+.keyword.other.unit {
+  color: #de935f;
+}
+.storage {
+  color: #b294bb;
+}
+.constant {
+  color: #de935f;
+}
+.constant.character.escape {
+  color: #8abeb7;
+}
+.constant.numeric {
+  color: #de935f;
+}
+.constant.other.color {
+  color: #8abeb7;
+}
+.constant.other.symbol {
+  color: #b5bd68;
+}
+.variable {
+  color: #cc6666;
+}
+.variable.interpolation {
+  color: #a3685a;
+}
+.variable.parameter.function {
+  color: #1d1f21;
+}
+.invalid.illegal {
+  background-color: #cc6666;
+  color: #ffffff;
+}
+.string {
+  color: #b5bd68;
+}
+.string.regexp {
+  color: #8abeb7;
+}
+.string.regexp .source.ruby.embedded {
+  color: #f0c674;
+}
+.string.other.link {
+  color: #cc6666;
+}
+.punctuation.definition.parameters,
+.punctuation.definition.array {
+  color: #1d1f21;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #81a2be;
+}
+.punctuation.definition.bold {
+  color: #f0c674;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #b294bb;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #a3685a;
+}
+.support.class {
+  color: #f0c674;
+}
+.support.function {
+  color: #8abeb7;
+}
+.support.function.any-method {
+  color: #81a2be;
+}
+.entity.name.function {
+  color: #81a2be;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #f0c674;
+}
+.entity.name.section {
+  color: #81a2be;
+}
+.entity.name.tag {
+  color: #cc6666;
+}
+.entity.other.attribute-name {
+  color: #de935f;
+}
+.entity.other.attribute-name.id {
+  color: #81a2be;
+}
+.meta.class {
+  color: #f0c674;
+}
+.meta.link {
+  color: #de935f;
+}
+.meta.require {
+  color: #81a2be;
+}
+.meta.selector {
+  color: #b294bb;
+}
+.meta.separator {
+  background-color: #373b41;
+  color: #1d1f21;
+}
+.meta.tag {
+  color: #1d1f21;
+}
+.none {
+  color: #1d1f21;
+}
+.markup.bold {
+  color: #de935f;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #b294bb;
+}
+.markup.deleted {
+  color: #cc6666;
+}
+.markup.italic {
+  color: #b294bb;
+  font-style: italic;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #81a2be;
+}
+.markup.inserted {
+  color: #b5bd68;
+}
+.markup.list {
+  color: #cc6666;
+}
+.markup.quote {
+  color: #de935f;
+}
+.markup.raw {
+  color: #b5bd68;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .markup.heading {
+  color: #cc6666;
+}
+.source.gfm .markup.link {
+  color: #81a2be;
+}
+.source.gfm .link .entity {
+  color: #8abeb7;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><h2 id="management-science">Management Science</h2>
+<hr>
+<h3 id="explain-fayol-s-principles-of-management">Explain Fayol&#39;s principles of management</h3>
+<p>Henry Fayol is a French Industrialist and the father of modern operational management theory.</p>
+<h4 id="general-principles-of-management-">General principles of management:</h4>
+<p>Fayol has given 14 principles of management.
+He has made distinction between management principles and management elements.
+While management principles is a fundamental truth and establishes cause effect relationship, elements of management denotes the function performed by a manager.</p>
+<p>While giving the management principles, Fayol has emphasized two things:</p>
+<ol>
+<li><p>The list of management principles is not exhaustive but suggestive and has discussed only those principles which he followed on most occasions.</p>
+</li>
+<li><p>principles of management are not rigid but flexible.</p>
+</li>
+</ol>
+<h4 id="principles">Principles</h4>
+<ol>
+<li><h5 id="division-of-work">Division of work</h5>
+<p>It is helpful to take the advantage of specialization.
+Here, the work is divided among the members of the group based on the employees skills and talents. It can be applied at all levels of the organization.</p>
+</li>
+<li><h5 id="authority-and-responsibility">Authority and Responsibility</h5>
+<p>Fayol finds authority as a continuation of official and personal factors. Official authority is derived from the manager’s position and personal authority is derived from personal qualities such as intelligence, experience, moral worth, past services, etc., Responsibility arises out of assignment of activity. In order to discharge the responsibility properly, there should be parity between authority and responsibility.</p>
+</li>
+<li><h5 id="discipline">Discipline</h5>
+<p>All the personal serving in an organization should be disciplined. Discipline is obedience, application, behavior and outward mark of respect shown by employees.</p>
+</li>
+<li><h5 id="unity-of-command">Unity of Command</h5>
+<p>Unity of command means that a person should get orders from only one superior. Fayol has considered unity of command as an important aspect in managing an organization. He says that “should it be violated, authority is undermined, discipline is in jeopardy, order disturbed, and stability threatened.”</p>
+</li>
+<li><h5 id="unity-of-direction">Unity of Direction</h5>
+<p>According to this principle, each group of activities with the same objective must have one head and one plan. It is concerned with functioning of the organization I respect of grouping of activities or planning. Unity of direction provides better coordination among various activities to be undertaken by an organization.</p>
+</li>
+<li><h5 id="subordination-of-individual-interest-to-general-interest">Subordination of individual interest to general interest</h5>
+<p>Individual interest must be subordinate to general interest when there is conflict between the two. However factors like ambition, laziness, weakness, etc., tend to reduce the importance of general interest. Therefore, superiors should set an example in fairness and goodness.</p>
+</li>
+<li><h5 id="remuneration-to-personnel">Remuneration to Personnel</h5>
+<p>Remuneration to employees should be fair and provide maximum possible satisfaction to employees and employers. Fayol did not favor profit sharing plan for workers but advocated it for managers. He was also in favor of non-financial benefits.</p>
+</li>
+<li><h5 id="centralization">Centralization</h5>
+<p>Everything which goes to increase the importance of subordinate’s role is decentralization; every thing which goes to reduce it is centralization. The degree of centralization or decentralization is determined by the needs of the company.</p>
+</li>
+<li><h5 id="scalar-chain">Scalar Chain</h5>
+<p>There should be a scalar chain of authority and of communication ranging from the highest to the lowest. It suggests that each communication going up or coming down must flow through each position in the line of authority. It can be short-circuited only in special circumstances. For this purpose, Fayol has suggested ‘gang plank’
+Scalar chain and gang plank can be presented as follows</p>
+<p><img src="" alt="HUGEASS LETTER &apos;A&apos;"></p>
+</li>
+<li><h5 id="order">Order</h5>
+<p>This is a principle relating to the arrangement of things and people. In material order, there should be a place for every thing and every thing should be in its place. Similarly, in social order, there should be the right man in the right place.</p>
+</li>
+<li><h5 id="equity">Equity</h5>
+<p>Equity is the combination of justice and kindness. Equity in treatment and behavior is liked by everyone and it brings loyalty in the organization. The application of equity requires good sense, experience and good nature.</p>
+</li>
+<li><h5 id="stability-of-tenure">Stability of tenure</h5>
+<p>No employee should be removed within short time. There should be reasonable security of jobs. Stability of tenure is essential to get an employee accustomed to new work and succeeding in doing it well</p>
+</li>
+<li><h5 id="initiative">Initiative</h5>
+<p>Within the limits of authority and discipline, managers should encourage their employees for taking initiative. Initiative is concerned with thinking out and execution of a plan. Initiative increases zeal and energy on the part of human beings.</p>
+</li>
+<li><h5 id="esprit-de-corps">Esprit de corps</h5>
+<p>It is the principle of ‘union is strength’ and extension of unity of command for establishing team work. The manager should encourage esprit de corps among his employees.</p>
+</li>
+</ol>
+<hr>
+<h3 id="discuss-the-factors-influencing-plant-location-strategy">Discuss the factors influencing plant location strategy</h3>
+<p>Factors affecting plant location</p>
+<ol>
+<li><p>Closeness to raw material:</p>
+<p>Normally the proportion of raw material cost to the cost of production is significant for every product. If the plant is located close to supply points of the raw material, the cost of procurement can be minimized, particularly if the raw material is fragile, perishable, bulky or heavy.</p>
+<p>Ex:-   Rice mills are located near by paddy fields.</p>
+</li>
+<li><p>Nearness to the markets:</p>
+<p>If the plant is located close to the markets, the cost of transportation can be minimized. This also helps the producers to have direct knowledge of the requirements of the customers. The knowledge about the profiles of customer segments enables the plant to mould its sales strategies accordingly.</p>
+</li>
+<li><p>Transportation facilities:</p>
+<p>The five basic modes of physical transportation are air, road, rail, water and pipeline. Firms consider relative costs, convenience and suitability of each mode and then select the transportation method.</p>
+<p>Ex:- Exporters may choose a location near to a seaport or airport.</p>
+</li>
+<li><p>Availability of labour:</p>
+<p>The availability of labour and skills is one of the important factors in production. Labour may be readily available in some areas than in other areas. Availability of skilled and unskilled in the required proportion in one area is usually not possible. Firms that emphasise more on technology require skilled people and so prefer a location where the skilled people are available and vice versa.</p>
+<ul>
+<li><p><strong>Natural and climatic factors</strong>
+In some cases, location of industry is simply the resultof  industry is simply the result of certain natural factors.<br>Shipbuilding is located in vishakapatnam and Bombay as these are   deep-water harbours, besides having well-developed markets for labour, raw material and machinery in its neighbourhood.</p>
+</li>
+<li><p><strong>Availability of amenities</strong>
+Locations with good external amenities such as housing,shops, community services, communication systems etc… are more attractive than those located in the remote areas.</p>
+</li>
+<li><p><strong>Availability of services</strong>
+Electricity, water, gas, drainage, and disposal of waste are  some of the important services that need to be considered while selecting a location.</p>
+</li>
+<li><p><strong>Safety requirements</strong>
+some units such as nuclear power stations and other chemical  and explosive factories may present potential threat to the surrounding neighbourhood . so firms should ensure that such units are located in remote areas where the damage will be minimum in case of an accident.</p>
+</li>
+<li><p><strong>Political interference</strong>
+This applies more in case of public enterprises, many a time, political considerations over ride the economic rational in assigning an industry to a particular location.</p>
+</li>
+<li><p><strong>Site cost</strong>
+The management of the firm should ensure that the  cost of the site is reasonable for the benefits that it is going to provide.</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="explain-product-lifecycle-and-marketing-strategies-to-be-followed-at-each-stage">Explain product lifecycle and marketing strategies to be followed at each stage</h3>
+<p>  The distinct phases through which every product goes through in its lifecycle are:</p>
+<ol>
+<li><h4 id="introduction">Introduction</h4>
+<p>This is the initial stage of product life-cycle,
+where a new product is introduced into the market and made available for purchase.
+In this stage, profits are negative or low because of lower sales and high distribution and production expenses.
+Most of the buyers show resistance to pick a pick a product,
+which is relatively new to the market.</p>
+</li>
+<li><h4 id="growth-stage">Growth stage</h4>
+<p>If the introduced new product satisfies the market,
+it will enter a growth stage, in which sales will start quickly.
+Those who buy in earlier stage will continue to buy and new buyers
+will follow their lead, especially if they hear favorable word of mouth.
+In this stage, profits are increased and promotion costs will spread over a large volume and unit manufacturing costs fall.</p>
+</li>
+<li><h4 id="maturity-stage">Maturity stage</h4>
+<p>At this stage, a product&#39;s sale growth tends to slow down and the product will enter a maturity stage.
+This stage normally lasts longer, compared to previous states.
+Profits decrease during this stage, while promotion costs increase.</p>
+</li>
+<li><h4 id="saturation">Saturation</h4>
+<p>Saturation is the stage in which sales stagnate and profits shrink as there are no new customers for the product.
+Competition intensifies and profit margins decline further as production and distribution costs increase.</p>
+</li>
+<li><h4 id="decline">Decline</h4>
+<p>In this phase, sales decline permanently and profits are lowered to a minimum or zero, and the product is withdrawn from the market. New products enter the market and push existing competing products out.</p>
+<h4 id="changes-in-the-marketing-strategy-during-product-life-cycle-">Changes in the marketing strategy during product life-cycle:</h4>
+<ol>
+<li><h5 id="introduction-stage">Introduction Stage</h5>
+<p>In this stage, the company must choose a launch strategy consistent with its intended product positioning.</p>
+<ul>
+<li>Should create product awareness and its availability.</li>
+<li>To attract distributors and encourage them to sell new products.</li>
+<li>To develop promotional activities aiming at both distributors and end users.</li>
+<li>Focus selling on those buyers who are most ready to buy.</li>
+</ul>
+</li>
+<li><h5 id="growth-stage">Growth Stage</h5>
+<ul>
+<li>At this stage, companies should continue to educate potential consumers and distributors.</li>
+<li>Should improve product quality adding new features and modes, entering new market segments and distribution channels.</li>
+<li>Should build product awareness.</li>
+<li>Should reduce prices at the right time to attract new buyers.</li>
+</ul>
+</li>
+<li><h5 id="maturity-stage">Maturity Stage</h5>
+<p>At this stage, companies should continue to invest in maturing products and try to modify the market, the product and the marketing mix.</p>
+<ul>
+<li>Should attempt to change product&#39;s characteristics, such as quality, features or styles.</li>
+<li>Efforts should be made to attract new users.</li>
+</ul>
+</li>
+<li><h5 id="saturation-stage">Saturation Stage</h5>
+<ul>
+<li>In this stage, company will not find new customers, it is advisable to the company to inspire usage rate for existing customers.</li>
+<li>Lower promotional expenses.</li>
+<li>Should enhance productivity in order to lower down unit cost.</li>
+</ul>
+</li>
+<li><h5 id="decline-stage">Decline Stage</h5>
+<p>At this stage, the management must decide whether to maintain the brand without change.</p>
+<ul>
+<li>Minimize sales and promotional expenses.</li>
+<li>Reduce costs and trying to maintain sales.</li>
+</ul>
+<p>If the company is not able to sustain the competition,
+then it can drop the product, selling it to another firm or liquidating it at salvage value.</p>
+</li>
+</ol>
+</li>
+</ol></body>
+</html>
