@@ -12,7 +12,7 @@ position:center;
   margin: auto;
 }
 #instafeed .likes {
-  font-family:'Segoe UI', 'Helvetical Neue', 'Roboto', 'Open Sans', 'Arial' sans-serif;
+  font-family:'Segoe UI', 'Helvetica Neue', 'Roboto', 'Open Sans', 'Arial', sans-serif;
   font-size:1em;
   position:relative;
   padding-bottom: .5em;
@@ -38,10 +38,10 @@ position:center;
 	p{
 		font-size: 1.5em;
 		line-height: 1.6em;
-		font-weight: 500;
+		/*font-weight: 500; too fat for Segoe UI*/
 	}
 	#name,#hello,#contact,#recentwork,#instagram,.footer{
-		font-family: 'Segoe UI', 'Helvetical Neue', 'Roboto', 'Open Sans', 'Arial' sans-serif;
+		font-family: 'Segoe UI', 'Helvetica Neue', 'Roboto', 'Open Sans', 'Arial', sans-serif;
 	}
 	#name
 	{
@@ -60,7 +60,7 @@ position:center;
 	}
 	body{
 		margin: 1.5em;
-		font-family: 'Segoe UI', 'Helvetical Neue', 'Roboto', 'Open Sans', 'Arial' sans-serif;
+		font-family: 'Segoe UI', 'Helvetica Neue', 'Roboto', 'Open Sans', 'Arial', sans-serif;
 		/*text-decoration: none;*/
 	}
 	#github-logo
