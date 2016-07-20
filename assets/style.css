@@ -41,7 +41,7 @@ position:center;
 		font-weight: 500;
 	}
 	#name,#hello,#contact,#recentwork,#instagram,.footer{
-		font-family: 'Open Sans',sans-serif;
+		font-family: 'Segoe UI', 'Helvetical Neue', 'Roboto', 'Open Sans', 'Arial' sans-serif;
 	}
 	#name
 	{
