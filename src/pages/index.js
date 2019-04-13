@@ -26,6 +26,7 @@ const IndexPage = () => {
               👋
             </span>{" "}
             <br />
+            <br />
             I&#8217;m Arjun. I live in Hyderabad and write software for the web.
           </p>
         </div>

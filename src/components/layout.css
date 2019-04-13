@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
 html {
-  font-family: sans-serif;
+  font-family: serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -621,10 +622,14 @@ pre tt:after {
   }
 }
 
+p {
+  font-family: "Merriweather";
+}
+
 body {
   padding: 1em;
   margin: 0 auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   /* background-image: none; */
   background-repeat: no-repeat;
