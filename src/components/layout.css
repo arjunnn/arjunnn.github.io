@@ -630,12 +630,11 @@ body {
   padding: 1em;
   margin: 0 auto;
   /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-  /* background-image: none; */
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   background-repeat: no-repeat;
   color: azure;
   /* transition: all 0.2s ease-in-out; */
-  /* transition: background-color 5000ms linear; */
+  transition: background-color 5000ms linear;
   min-height: 100vh;
 }
 
