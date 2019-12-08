@@ -46,14 +46,17 @@ const IndexPage = () => {
             I'm a full-stack web developer and a platform agnostic geek. I'm
             currently working at{" "}
             <a
-              href="https://biz.medleymed.com/"
+              href="http://melvault.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              MedleyMed
+              Melvault
             </a>
-            , a <abbr title="Business to business">B2B</abbr> e-commerce
-            platform.
+            , on{" "}
+            <a href="https://en.wikipedia.org/wiki/Business_support_system">
+              BSS
+            </a>{" "}
+            stuff.
           </p>
 
           <p>
