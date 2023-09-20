@@ -27,7 +27,7 @@ const IndexPage = () => {
             </span>{" "}
             <br />
             <br />
-            I&#8217;m Arjun. I live in Hyderabad and write software for the web.
+            I&#8217;m Arjun. I live in Crawley 🇬🇧 and write software for the web.
           </p>
         </div>
         <div className="pic">
@@ -43,20 +43,7 @@ const IndexPage = () => {
         </div>
         <div className="bio">
           <p>
-            I'm a full-stack web developer and a platform agnostic geek. I'm
-            currently working at{" "}
-            <a
-              href="http://melvault.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Melvault
-            </a>
-            , on{" "}
-            <a href="https://en.wikipedia.org/wiki/Business_support_system">
-              BSS
-            </a>{" "}
-            stuff.
+            I'm a full-stack web developer and a platform agnostic geek.  
           </p>
 
           <p>

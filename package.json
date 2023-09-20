@@ -7,6 +7,7 @@
   "dependencies": {
     "card-vibes": "^0.1.0",
     "gatsby": "^5.11.0",
+    "gatsby-cli": "^5.12.1",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-manifest": "^2.0.26",
     "gatsby-plugin-offline": "^2.0.25",
