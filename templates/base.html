@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(value=" en-US" ) }}">
+
+<head>
+  {%- if config.webserver_sends_csp_headers %}
+  {%- include "security_tags.html" ignore missing %}
+  {%- endif %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include "favicon.html" ignore missing -%}
+  <title title="AM☺︎">{%- block title %}{{ config.title }}{%- endblock %}</title>
+  {% include "seo_tags.html" ignore missing %}
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  {%- if config.generate_feed %}
+  {% block rss -%}
+  <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
+    %}"application/rss+xml"{% endif %} title="{{ config.title }}"
+    href="{{ get_url(path=config.feed_filename) | safe }}">
+
+  {%- endblock -%}
+  {%- endif %}
+  <style>
+    {% include "style.css.html" ignore missing %}
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+  </style>
+
+  {% include "custom_head.html" ignore missing -%}
+</head>
+
+<body>
+  {% include "header.html" ignore missing -%}
+  <main>
+    {% block main %}{%- endblock -%}
+  </main>
+  {% include "footer.html" ignore missing -%}
+  {% include "custom_body.html" ignore missing -%}
+</body>
+<script>
+  const FNDEF = "footnote-definition";
+  const FNREF = "footnote-reference";
+  document.addEventListener("DOMContentLoaded", function () {
+    let images = document.querySelectorAll('img, video');
+    images.forEach(function (img) {
+      let caption = document.createElement('figcaption');
+      caption.textContent = (img.title || img.alt);
+      img.parentNode.insertBefore(caption, img.nextSibling);
+    });
+    let footnote_refs = document.querySelectorAll(`.${FNREF}`)
+    footnote_refs.forEach(function (ref) {
+      ref.firstChild.id = `${FNREF}-${ref.firstChild.textContent}`;
+    });
+    let footnote_defs = document.querySelectorAll(`.${FNDEF}`);
+    footnote_defs.forEach(function (def) {
+      let backref = document.createElement('a');
+      backref.setAttribute('href', `#${FNREF}-${def.id}`);
+      backref.textContent = "↩";
+      backref.style.marginLeft = "5px";
+      // def.insertBefore(backref, def.firstChild.nextSibling);
+      console.log(backref)
+      def.children[1].appendChild(backref);
+    });
+  });
+
+</script>
+
+</html>

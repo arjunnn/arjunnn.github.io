@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="&#x2F;favicon.png"><title title="AM☺︎">Aℳ☺︎</title>
+  <meta name="title" content="Running A Marathon">
+<meta name="description" content="" />
+
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <style>
+    :root {
+  --primary-colour: #d13c57;
+}
+
+img, video {
+  max-width: 90%;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: smaller;
+  font-family: monospace;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+
+pre {
+  overflow: scroll;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+body {
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+  /* min-height: 100vh; */
+  /* background-color: rgb(229 225 233); */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:  100px auto auto;
+  grid-template-areas: 
+    "header header header header header header"
+    ".    main   main   main   main   ."
+    "footer footer footer footer footer footer";
+  gap: 5px;
+  min-height: 80vh;
+
+}
+
+body a:visited, body a {
+  color: inherit;
+}
+
+header {
+  grid-area: header;
+  justify-self: stretch;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-areas: "logo nav";
+  max-height: 97px;
+
+}
+
+header a {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: inherit;
+  padding: 5px 10px 5px 10px;
+  margin: 0 10px 0 10px;
+  
+}
+
+header a:visited {
+  color: initial;
+}
+
+footer {
+  text-align: center;
+  grid-area: footer;
+  align-self: end;
+  justify-self: stretch;
+}
+
+main {
+  grid-area: main;
+  /* display: grid; */
+  /* place-content: baseline; */
+  /* grid-template-columns: repeat(6, 1fr); */
+  max-width: 800px;
+  justify-self: center;
+}
+
+.main-home {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    ". intro intro pic pic ."
+    "bio bio bio bio bio bio";
+  align-items: center;
+  justify-items: center;
+  font-size: 1.2rem;
+  /* color: rgb(74, 70, 70); */
+  align-content: center;
+  grid-column: inherit;
+}
+
+
+.intro {
+  grid-area: intro;
+  font-size: larger;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+img.pic {
+  grid-area: pic;
+  clip-path: circle(48% at center);
+  max-height: 60%;
+  max-width: unset;
+}
+
+.bio {
+  grid-area: bio;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+  max-height: 50px;
+}
+
+.blog-index {
+  display: grid;
+  grid-column: inherit;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  /* grid-template-areas: 
+    "title post-list post-list post-list" */
+}
+
+.blog-index ul {
+  list-style-type: none;
+}
+
+.blog-index a {
+  text-decoration: none;
+}
+
+.blog-index .blog-post-title {
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  text-rendering: optimizeLegibility;
+}
+
+.blog-post-list {
+  grid-column: 2 / 5;
+  display: grid;
+  gap: 10px;
+  line-height: 1.2rem;
+}
+
+.blog-post-card p {
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+}
+
+.blog-post-title {
+  margin-bottom: 10px;
+  color: var(--primary-colour);
+}
+
+.blog-tag, .blog-tag:visited {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--primary-colour);
+  padding: 3px 7px;
+  border: 2px solid;
+  border-radius: 20px;
+  box-shadow: none;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-transform: capitalize;
+}
+
+.blog-tag:hover, .blog-tag:focus {
+  color: #fff;
+  background-color: var(--primary-colour);
+  border-color: var(--primary-colour);
+}
+
+.blog-post-container {
+  line-height: 1.75;
+  max-width: 640px;
+  
+}
+
+.previous-next-continer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.footnote-definition-label {
+  font-size: large;
+  top: 50px !important;
+}
+
+.footnote-definition-label::after {
+  display: inline;
+  content: "⋆";
+  position: absolute;
+  font-size: 200%;
+}
+
+.footnote-definition {
+  line-height: 1rem;
+  display: grid;
+  grid-template-columns: 20px auto 10px;
+  column-gap: 10px;
+}
+
+.footnote-definition p{
+  display: inline;
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    display: block;
+  }
+  .main-home {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "intro"
+      "bio";
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .bio {
+    grid-column-start: 1 !important;
+    grid-column-end: 7 !important;
+  }
+  .blog-index {
+    display: block;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  
+}
+
+
+.hourglass {
+  position: relative;
+  font-size: 300%;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.hourglass::before, .hourglass::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '⌛';
+  animation: rotateHourglass 2s 3s forwards infinite, changeHourglass 2s 3s forwards infinite;
+  display: inline-block;
+}
+
+.hourglass::after {
+  content: '⏳';
+  opacity: 0;
+  animation: showNonEmptyHourglass 2s 3s forwards infinite; /* Delayed start */
+}
+
+@keyframes rotateHourglass {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(180deg);
+  }
+}
+
+@keyframes changeHourglass {
+  0%, 25%, 80% {
+      opacity: 1;
+      top: 0;
+  }
+  100% {
+      opacity: 0;
+      top: -2px;
+  }
+}
+
+@keyframes showNonEmptyHourglass {
+  0%, 25%, 75% {
+      opacity: 0;
+      top: 0;
+  }
+  100% {
+      opacity: 1;
+      top: 2px;
+  }
+}
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+  </style>
+
+  </head>
+
+<body>
+  <header>
+  <a href="https:&#x2F;&#x2F;arjun.ninja" class="title">
+    <h2>Aℳ☺︎</h2>
+  </a>
+  <nav>
+    <a href="https:&#x2F;&#x2F;arjun.ninja">Home</a>
+      <a href="https://arjun.ninja/blog/">&#x2F;Blog</a>
+  </nav>
+</header>
+<main>
+    
+<div class="blog-post-container">
+    <h1 class="blog-post-title">Running A Marathon</h1>
+    <small class="subtitle">
+        <time datetime=' 2019-12-09T00:00:00+00:00' pubdate>09 Dec, 2019</time></small>
+    <div class="blog-post-content">
+        <p>Well, not really a marathon, but a 10K</p>
+<span id="continue-reading"></span>
+<p>One of my big goals for this year was to have an active lifestyle, and I decided that running a marathon would be a good step (pun intended) in that direction. And so, on a wet Sunday in August, I participated in <strong>Airtel Hyderabad Marathon</strong> — the biggest annual running event in the city — in the 10K category.</p>
+<h2 id="false-starts">False Starts</h2>
+<p>I had originally planned on running a Half marathon. As soon as the dates were announced, I made an overly optimistic (given my sedentary lifestyle) workout plan that included a week of warm-up runs, 10 weeks of training, and new shoes for the big day.</p>
+<p>I used Runkeeper<sup class="footnote-reference"><a href="#1">1</a></sup> to track my runs and form the very first run, I struggled to get a good pace. As we often do, I dismissed it as teething problems, and kept pushing though the pain for a week. By the end of the week, I had severe pain in my shinbones — even simply stomping my feet hurt!</p>
+<p>And so I decided to take some time off to heal my legs, thinking that perhaps I’d exerted myself too much too soon. A week into my 10 week training, I was forced to take a month’s break.</p>
+<p>Then one day, I fell down the stairs. Yup. Slipped on soap water and crashed hard on my back. Got bruises all along my back, thigh and butt. Thankfully, nothing happened to my neck or head. </p>
+<p>Naturally, I headed to a doctor and was told that it wasn’t serious and everything would heal in good time. It was there that I found out that I had Vitamin D3 deficiency and my joints were to some degree <em><a href="https://en.wikipedia.org/wiki/Hypermobility_(joints)">hypermobile</a></em>. This meant that I had to be careful when I exercise my joints, especially my knees.</p>
+<p>However, the doctor encouraged me to take part in the marathon after completing my physiotherapy.</p>
+<h2 id="ready-set-go">Ready, Set, Go!</h2>
+<p>By this point I knew that I couldn’t possibly take part in the Half Marathon with virtually zero training, so I registered to take part in the 10K event. And then I didn’t run even once until race day.</p>
+<p>Armed with Gatorade, glucose pills, and creeping anxiety, I reached my starting point at Hitex Exhibition Center, along with 8,000 others taking part in the 10K leg of the marathon.</p>
+<p>The run itself was brutal, exhausting, but ultimately cathartic.</p>
+<p>I managed to not stop at any point, and just keep running or walking or even just moving. There were multiple points along the route where volunteers were handing out water, bananas, sliced lemons(?!), glucose powder, electrolytes etc. They were cheering and hooting to encourage runners to keep moving. </p>
+<p>The best cheer squad by far was a row of little schoolchildren who were singing, clapping, and high-fiving the runners. They put a smile on everyone’s faces. </p>
+<p>I could barely walk by the end, but all I knew is that I had to complete it, if only to prove to myself that I could. I stumbled my way into the finish line and collected my medal, feeling relieved at last. The official time was 1:21:16, which is “not great, but not terrible”<sup class="footnote-reference"><a href="#2">2</a></sup>. ¯\_(ツ)_/¯</p>
+<p><img src="/images/arjun-posing-with-his-medal.jpeg" alt="arjun posing with his medal" title="sweet victory" />
+<img src="/images/route-map.jpeg" alt="route map" title="route map in runkeeper app" /></p>
+<hr />
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>The voice assisted run training is pretty helpful. Not sure if it’s worth the ~₹620 weekly fee though.</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>Just like 3.6 Roentgen, in <em><a href="https://www.youtube.com/watch?v=M6kYod3_gwk">Chernobyl</a></em> </p>
+</div>
+
+    </div>
+    <hr>
+    <p> Tags:
+        <a href="https://arjun.ninja/tags/personal/" class="blog-tag">#personal</a>
+        <a href="https://arjun.ninja/tags/running/" class="blog-tag">#running</a>
+    </p>
+</div>
+<!-- <div class="previous-next-continer">
+    <div class="previous-post-container">
+        <span><i><small>Previous Post:</small></i></span><a href="https://arjun.ninja/blog/work-log/" class="blog-post-link">
+            <p class="blog-post-title">
+                Using a Work Journal
+            </p>
+            <small>
+                <time datetime=' 2020-04-24T00:00:00+00:00' pubdate>24 Apr, 2020</time>
+            </small>
+        </a>
+    </div>
+    <div class="next-post-container">
+        <span><i><small>Next Post:</small></i></span>
+    </div>
+</div> -->
+
+</main>
+  <footer>
+    <p class="hourglass"></p><br>
+  <small
+    >Thank you for visiting! 💜<br />
+    This website is built with
+    <a href="https://www.getzola.org/">Zola</a> and hosted on
+    <a href="https://github.com/arjunnn/arjunnn.github.io">GitHub</a>
+  </small>
+</footer>
+</body>
+<script>
+  const FNDEF = "footnote-definition";
+  const FNREF = "footnote-reference";
+  document.addEventListener("DOMContentLoaded", function () {
+    let images = document.querySelectorAll('img, video');
+    images.forEach(function (img) {
+      let caption = document.createElement('figcaption');
+      caption.textContent = (img.title || img.alt);
+      img.parentNode.insertBefore(caption, img.nextSibling);
+    });
+    let footnote_refs = document.querySelectorAll(`.${FNREF}`)
+    footnote_refs.forEach(function (ref) {
+      ref.firstChild.id = `${FNREF}-${ref.firstChild.textContent}`;
+    });
+    let footnote_defs = document.querySelectorAll(`.${FNDEF}`);
+    footnote_defs.forEach(function (def) {
+      let backref = document.createElement('a');
+      backref.setAttribute('href', `#${FNREF}-${def.id}`);
+      backref.textContent = "↩";
+      backref.style.marginLeft = "5px";
+      // def.insertBefore(backref, def.firstChild.nextSibling);
+      console.log(backref)
+      def.children[1].appendChild(backref);
+    });
+  });
+
+</script>
+
+</html>

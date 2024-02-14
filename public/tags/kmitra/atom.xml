@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Aℳ☺︎ - kmitra</title>
+    <link rel="self" type="application/atom+xml" href="https://arjun.ninja/tags/kmitra/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://arjun.ninja"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2015-06-23T00:00:00+00:00</updated>
+    <id>https://arjun.ninja/tags/kmitra/atom.xml</id>
+    <entry xml:lang="en">
+        <title>My Journey With kMITRA</title>
+        <published>2015-06-23T00:00:00+00:00</published>
+        <updated>2015-06-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://arjun.ninja/blog/my-journey-with-kmitra/"/>
+        <id>https://arjun.ninja/blog/my-journey-with-kmitra/</id>
+        
+        <content type="html" xml:base="https://arjun.ninja/blog/my-journey-with-kmitra/">&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;photo-1445882679958-91991ef6832f.jpg&quot; alt=&quot;journey&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;&#x2F;strong&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;kMITRA is a student-run monthly magazine by the students of &lt;a href=&quot;http:&#x2F;&#x2F;kmit.in&#x2F;&quot;&gt;KMIT&lt;&#x2F;a&gt;.
+The magazine aspires to cover and inform readers about science, culture, art, technology, and issues relevant to the student commmunity, in a coherent manner. &lt;a href=&quot;http:&#x2F;&#x2F;kmit.in&#x2F;emagazine&quot;&gt;http:&#x2F;&#x2F;kmit.in&#x2F;emagazine&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I am the developer and designer of kMITRA, something I really enjoy dedicating my time to. Here’s a brief overview and history of the website from a technical standpoint.&lt;&#x2F;p&gt;
+&lt;!-- &gt;This is how we *roll* &amp;nbsp; :information_desk_person: --&gt;
+&lt;h4 id=&quot;the-logo&quot;&gt;&lt;strong&gt;The Logo:&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;kmitra-logo.png&quot; alt=&quot;kmitra logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;back-end&quot;&gt;&lt;strong&gt;Back-End&lt;&#x2F;strong&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;The website runs on the &lt;a href=&quot;https:&#x2F;&#x2F;wordpress.org&quot;&gt;WordPress&lt;&#x2F;a&gt; platform.
+We chose WordPress as our back-end because we believe in the future of WordPress, as a simple, community driven, scalable, and endlessly extensible publishing platform.
+More than &lt;strong&gt;71 million&lt;&#x2F;strong&gt; people can’t be wrong. Also because it’s free, lol. &lt;&#x2F;p&gt;
+&lt;!-- :laughing: --&gt;
+&lt;h2 id=&quot;content&quot;&gt;&lt;strong&gt;Content&lt;&#x2F;strong&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Most of the content, such as text and images is hosted on KMIT’s own webservers, organized and indexed by the WordPress CMS(Content Management System).
+Videos, however, are hosted on our &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UCVy33lRaRxA8ACd-QU2Gumw&quot;&gt;YouTube channel&lt;&#x2F;a&gt;.
+Newsletters are distributed to subscribers in bulk via a &lt;a href=&quot;https:&#x2F;&#x2F;mailchimp.com&#x2F;&quot;&gt;Mailchimp&lt;&#x2F;a&gt; server.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;baby-steps&quot;&gt;&lt;strong&gt;Baby Steps&lt;&#x2F;strong&gt;&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;plugins&quot;&gt;&lt;strong&gt;Plugins&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;kMITRA was required to be a periodical magazine, with new issues every month.
+By default, WordPress does not provide management functionality for periodicals.
+After days of head scratching, we finally found a &lt;a href=&quot;https:&#x2F;&#x2F;wordpress.org&#x2F;plugins&#x2F;issuem&#x2F;&quot;&gt;plugin&lt;&#x2F;a&gt; that provided a basic structure for handling issue-based publications within WordPress.
+This meant that I did not have to start coding from scratch. A few custom functions later, we were satisfied with its functionality.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;design&quot;&gt;&lt;strong&gt;Design&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;We then moved on to design. While deciding the font, we were looking for type that had excellent legibility and was optimized for all screen sizes;
+so we chose the &lt;a href=&quot;https:&#x2F;&#x2F;www.google.com&#x2F;fonts&#x2F;specimen&#x2F;Open+Sans&quot;&gt;Open Sans&lt;&#x2F;a&gt; typeface for all the text and &lt;a href=&quot;https:&#x2F;&#x2F;www.google.com&#x2F;fonts&#x2F;specimen&#x2F;Playfair+Display&quot;&gt;Playfair Display&lt;&#x2F;a&gt; typeface for bold, eye-catching Headlines.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;layout&quot;&gt;&lt;strong&gt;Layout&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;The layout or UI is the first thing a reader notices when looking at a website. We needed something elegant and functional for kMITRA, with generous use of negative space to let the user focus on the actual content. It was fairly easy to achieve the desired look of the website using a base theme and custom CSS.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;migration&quot;&gt;&lt;strong&gt;Migration&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;Since the old magazine, Vipasana, was located at &lt;code&gt;kmit.in&#x2F;newsletter&lt;&#x2F;code&gt; for a long time, search engines such as google provided links for Vipasana articles using the old URL. This lead to a number of &lt;code&gt;404: NOT FOUND&lt;&#x2F;code&gt; error messages.
+I handled these requests by modifying the &lt;code&gt;.htaccess&lt;&#x2F;code&gt; file of KMIT’s Apache server to include &lt;code&gt;HTTP 301&lt;&#x2F;code&gt; redirects.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;example&quot;&gt;&lt;strong&gt;example:&lt;&#x2F;strong&gt;&lt;&#x2F;h5&gt;
+&lt;pre data-lang=&quot;apacheconfig&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-apacheconfig &quot;&gt;&lt;code class=&quot;language-apacheconfig&quot; data-lang=&quot;apacheconfig&quot;&gt;&lt;span&gt;RedirectMatch 301 &#x2F;newsletter&#x2F;(.*) http:&#x2F;&#x2F;kmit.in&#x2F;emagazine&#x2F;$1
+&lt;&#x2F;span&gt;&lt;span&gt;RedirectMatch 301 &#x2F;kmitra http:&#x2F;&#x2F;kmit.in&#x2F;emagazine&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;reception&quot;&gt;&lt;strong&gt;Reception&lt;&#x2F;strong&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;kMITRA launched on 22nd October last year, with only a Facebook &lt;a href=&quot;https:&#x2F;&#x2F;facebook.com&#x2F;kmitrakmit&quot;&gt;page&lt;&#x2F;a&gt; for publicity.
+The response was, and continues to be tremendous. It has exceeded all of our expectations.
+The entire team of kMITRA is overjoyed.
+The dedication of our readers gives us immense hope for the future of the magazine and a sense of responsibility towards delivering quality and engaging content.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;here-are-some-stats&quot;&gt;&lt;strong&gt;Here are some stats:&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;kmitra-stats.jpg&quot; alt=&quot;kMITRA Stats&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: These numbers are from Feb-Jun 2015 only. That’s when we started collecting data.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;lessons-learnt&quot;&gt;&lt;strong&gt;Lessons Learnt&lt;&#x2F;strong&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Developing kMITRA has taught me a great deal about the technologies behind it. I now see how exhilarating solving problems can be. It has helped me communicate better with my team and put forward my ideas and views in a coherent manner.&lt;&#x2F;p&gt;
+&lt;p&gt;Additionally, I designed covers for some of the issues.&lt;&#x2F;p&gt;
+&lt;p&gt;One of my most memorable assignments was creating a special &lt;a href=&quot;http:&#x2F;&#x2F;kmit.in&#x2F;emagazine&#x2F;oscars&#x2F;&quot;&gt;page&lt;&#x2F;a&gt; for kMITRA’s coverage of Oscars 2015.&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Issue 1&lt;&#x2F;th&gt;&lt;th&gt;Issue 2&lt;&#x2F;th&gt;&lt;th&gt;Issue 3&lt;&#x2F;th&gt;&lt;th&gt;Issue 4&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;arjunnn&#x2F;kmitemag&#x2F;master&#x2F;All%20Logos&#x2F;issue4.png&quot; alt=&quot;issue-1-cover&quot; &#x2F;&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;arjunnn&#x2F;kmitemag&#x2F;master&#x2F;All%20Logos&#x2F;issue4new.png&quot; alt=&quot;issue-2-cover&quot; &#x2F;&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;arjunnn&#x2F;kmitemag&#x2F;master&#x2F;All%20Logos&#x2F;issue5.png&quot; alt=&quot;issue-3-cover&quot; &#x2F;&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;arjunnn&#x2F;kmitemag&#x2F;master&#x2F;All%20Logos&#x2F;issue6.png&quot; alt=&quot;issue-4-cover&quot; &#x2F;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;I look forward to continue contributing to the magazine during my final year at KMIT.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;technologies-used&quot;&gt;&lt;strong&gt;Technologies used&lt;&#x2F;strong&gt;&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;front-end&quot;&gt;&lt;strong&gt;Front-End&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML&lt;&#x2F;li&gt;
+&lt;li&gt;CSS&lt;&#x2F;li&gt;
+&lt;li&gt;JavaScript&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;back-end-1&quot;&gt;&lt;strong&gt;Back-End&lt;&#x2F;strong&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;PHP&lt;&#x2F;li&gt;
+&lt;li&gt;Apache HTTP Server&lt;&#x2F;li&gt;
+&lt;li&gt;WordPress CMS&#x2F;CDN&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Thanks for reading :)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;thatsallfolks.gif&quot; alt=&quot;That’s All Folks!&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;until next time..&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

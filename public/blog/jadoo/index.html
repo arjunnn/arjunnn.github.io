@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="&#x2F;favicon.png"><title title="AM☺︎">Aℳ☺︎</title>
+  <meta name="title" content="Jadoo">
+<meta name="description" content="" />
+
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <style>
+    :root {
+  --primary-colour: #d13c57;
+}
+
+img, video {
+  max-width: 90%;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: smaller;
+  font-family: monospace;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+
+pre {
+  overflow: scroll;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+body {
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+  /* min-height: 100vh; */
+  /* background-color: rgb(229 225 233); */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:  100px auto auto;
+  grid-template-areas: 
+    "header header header header header header"
+    ".    main   main   main   main   ."
+    "footer footer footer footer footer footer";
+  gap: 5px;
+  min-height: 80vh;
+
+}
+
+body a:visited, body a {
+  color: inherit;
+}
+
+header {
+  grid-area: header;
+  justify-self: stretch;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-areas: "logo nav";
+  max-height: 97px;
+
+}
+
+header a {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: inherit;
+  padding: 5px 10px 5px 10px;
+  margin: 0 10px 0 10px;
+  
+}
+
+header a:visited {
+  color: initial;
+}
+
+footer {
+  text-align: center;
+  grid-area: footer;
+  align-self: end;
+  justify-self: stretch;
+}
+
+main {
+  grid-area: main;
+  /* display: grid; */
+  /* place-content: baseline; */
+  /* grid-template-columns: repeat(6, 1fr); */
+  max-width: 800px;
+  justify-self: center;
+}
+
+.main-home {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    ". intro intro pic pic ."
+    "bio bio bio bio bio bio";
+  align-items: center;
+  justify-items: center;
+  font-size: 1.2rem;
+  /* color: rgb(74, 70, 70); */
+  align-content: center;
+  grid-column: inherit;
+}
+
+
+.intro {
+  grid-area: intro;
+  font-size: larger;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+img.pic {
+  grid-area: pic;
+  clip-path: circle(48% at center);
+  max-height: 60%;
+  max-width: unset;
+}
+
+.bio {
+  grid-area: bio;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+  max-height: 50px;
+}
+
+.blog-index {
+  display: grid;
+  grid-column: inherit;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  /* grid-template-areas: 
+    "title post-list post-list post-list" */
+}
+
+.blog-index ul {
+  list-style-type: none;
+}
+
+.blog-index a {
+  text-decoration: none;
+}
+
+.blog-index .blog-post-title {
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  text-rendering: optimizeLegibility;
+}
+
+.blog-post-list {
+  grid-column: 2 / 5;
+  display: grid;
+  gap: 10px;
+  line-height: 1.2rem;
+}
+
+.blog-post-card p {
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+}
+
+.blog-post-title {
+  margin-bottom: 10px;
+  color: var(--primary-colour);
+}
+
+.blog-tag, .blog-tag:visited {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--primary-colour);
+  padding: 3px 7px;
+  border: 2px solid;
+  border-radius: 20px;
+  box-shadow: none;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-transform: capitalize;
+}
+
+.blog-tag:hover, .blog-tag:focus {
+  color: #fff;
+  background-color: var(--primary-colour);
+  border-color: var(--primary-colour);
+}
+
+.blog-post-container {
+  line-height: 1.75;
+  max-width: 640px;
+  
+}
+
+.previous-next-continer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.footnote-definition-label {
+  font-size: large;
+  top: 50px !important;
+}
+
+.footnote-definition-label::after {
+  display: inline;
+  content: "⋆";
+  position: absolute;
+  font-size: 200%;
+}
+
+.footnote-definition {
+  line-height: 1rem;
+  display: grid;
+  grid-template-columns: 20px auto 10px;
+  column-gap: 10px;
+}
+
+.footnote-definition p{
+  display: inline;
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    display: block;
+  }
+  .main-home {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "intro"
+      "bio";
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .bio {
+    grid-column-start: 1 !important;
+    grid-column-end: 7 !important;
+  }
+  .blog-index {
+    display: block;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  
+}
+
+
+.hourglass {
+  position: relative;
+  font-size: 300%;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.hourglass::before, .hourglass::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '⌛';
+  animation: rotateHourglass 2s 3s forwards infinite, changeHourglass 2s 3s forwards infinite;
+  display: inline-block;
+}
+
+.hourglass::after {
+  content: '⏳';
+  opacity: 0;
+  animation: showNonEmptyHourglass 2s 3s forwards infinite; /* Delayed start */
+}
+
+@keyframes rotateHourglass {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(180deg);
+  }
+}
+
+@keyframes changeHourglass {
+  0%, 25%, 80% {
+      opacity: 1;
+      top: 0;
+  }
+  100% {
+      opacity: 0;
+      top: -2px;
+  }
+}
+
+@keyframes showNonEmptyHourglass {
+  0%, 25%, 75% {
+      opacity: 0;
+      top: 0;
+  }
+  100% {
+      opacity: 1;
+      top: 2px;
+  }
+}
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+  </style>
+
+  </head>
+
+<body>
+  <header>
+  <a href="https:&#x2F;&#x2F;arjun.ninja" class="title">
+    <h2>Aℳ☺︎</h2>
+  </a>
+  <nav>
+    <a href="https:&#x2F;&#x2F;arjun.ninja">Home</a>
+      <a href="https://arjun.ninja/blog/">&#x2F;Blog</a>
+  </nav>
+</header>
+<main>
+    
+<div class="blog-post-container">
+    <h1 class="blog-post-title">Jadoo</h1>
+    <small class="subtitle">
+        <time datetime=' 2016-12-15T00:00:00+00:00' pubdate>15 Dec, 2016</time></small>
+    <div class="blog-post-content">
+        <p>When I saw <em><a href="https://en.wikipedia.org/wiki/Koi..._Mil_Gaya">Koi Mil Gaya</a></em> for the first time in 2003, it quickly became one of my favourite movies.</p>
+<span id="continue-reading"></span>
+<p>It had elements such as an underdog to achiever storyline, aliens, friendship, and comedy.
+The combination of all these, along with Hrithik Roshan’s brilliant performance won me over.
+I hadn’t yet seen <em>E.T.</em> then and this movie was the closest my 8 year old self had come to alien sci-fi adventure.</p>
+<p>Over the years, among other things, the distinct theme music of the film stuck with me as did the computer interface used in the movie to communicate with aliens.</p>
+<p>So as a tribute, I combined both of those to create <strong><a href="http://arjun.ninja/jadoo">Jadoo</a></strong>, a web app that attempts to replicate the interface from the film. Works only in Chrome/Opera now. Try it with sound!</p>
+<p>Check out the source <a href="https://github.com/arjunnn/jadoo">here</a>.</p>
+<p><a href="http://arjun.ninja/jadoo"><img src="/images/jadoo.png" alt="jadoo screenshot" /></a></p>
+
+    </div>
+    <hr>
+    <p> Tags:
+        <a href="https://arjun.ninja/tags/projects/" class="blog-tag">#projects</a>
+        <a href="https://arjun.ninja/tags/javascript/" class="blog-tag">#javascript</a>
+    </p>
+</div>
+<!-- <div class="previous-next-continer">
+    <div class="previous-post-container">
+        <span><i><small>Previous Post:</small></i></span><a href="https://arjun.ninja/blog/how-i-built-sketch/" class="blog-post-link">
+            <p class="blog-post-title">
+                How I Built Sketch
+            </p>
+            <small>
+                <time datetime=' 2017-04-16T00:00:00+00:00' pubdate>16 Apr, 2017</time>
+            </small>
+        </a>
+    </div>
+    <div class="next-post-container">
+        <span><i><small>Next Post:</small></i></span>
+    </div>
+</div> -->
+
+</main>
+  <footer>
+    <p class="hourglass"></p><br>
+  <small
+    >Thank you for visiting! 💜<br />
+    This website is built with
+    <a href="https://www.getzola.org/">Zola</a> and hosted on
+    <a href="https://github.com/arjunnn/arjunnn.github.io">GitHub</a>
+  </small>
+</footer>
+</body>
+<script>
+  const FNDEF = "footnote-definition";
+  const FNREF = "footnote-reference";
+  document.addEventListener("DOMContentLoaded", function () {
+    let images = document.querySelectorAll('img, video');
+    images.forEach(function (img) {
+      let caption = document.createElement('figcaption');
+      caption.textContent = (img.title || img.alt);
+      img.parentNode.insertBefore(caption, img.nextSibling);
+    });
+    let footnote_refs = document.querySelectorAll(`.${FNREF}`)
+    footnote_refs.forEach(function (ref) {
+      ref.firstChild.id = `${FNREF}-${ref.firstChild.textContent}`;
+    });
+    let footnote_defs = document.querySelectorAll(`.${FNDEF}`);
+    footnote_defs.forEach(function (def) {
+      let backref = document.createElement('a');
+      backref.setAttribute('href', `#${FNREF}-${def.id}`);
+      backref.textContent = "↩";
+      backref.style.marginLeft = "5px";
+      // def.insertBefore(backref, def.firstChild.nextSibling);
+      console.log(backref)
+      def.children[1].appendChild(backref);
+    });
+  });
+
+</script>
+
+</html>

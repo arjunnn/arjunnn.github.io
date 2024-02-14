@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="&#x2F;favicon.png"><title title="AM☺︎">Aℳ☺︎</title>
+  <meta name="title" content="Using a Work Journal">
+<meta name="description" content="" />
+
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <style>
+    :root {
+  --primary-colour: #d13c57;
+}
+
+img, video {
+  max-width: 90%;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: smaller;
+  font-family: monospace;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+
+pre {
+  overflow: scroll;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+body {
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+  /* min-height: 100vh; */
+  /* background-color: rgb(229 225 233); */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:  100px auto auto;
+  grid-template-areas: 
+    "header header header header header header"
+    ".    main   main   main   main   ."
+    "footer footer footer footer footer footer";
+  gap: 5px;
+  min-height: 80vh;
+
+}
+
+body a:visited, body a {
+  color: inherit;
+}
+
+header {
+  grid-area: header;
+  justify-self: stretch;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-areas: "logo nav";
+  max-height: 97px;
+
+}
+
+header a {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: inherit;
+  padding: 5px 10px 5px 10px;
+  margin: 0 10px 0 10px;
+  
+}
+
+header a:visited {
+  color: initial;
+}
+
+footer {
+  text-align: center;
+  grid-area: footer;
+  align-self: end;
+  justify-self: stretch;
+}
+
+main {
+  grid-area: main;
+  /* display: grid; */
+  /* place-content: baseline; */
+  /* grid-template-columns: repeat(6, 1fr); */
+  max-width: 800px;
+  justify-self: center;
+}
+
+.main-home {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    ". intro intro pic pic ."
+    "bio bio bio bio bio bio";
+  align-items: center;
+  justify-items: center;
+  font-size: 1.2rem;
+  /* color: rgb(74, 70, 70); */
+  align-content: center;
+  grid-column: inherit;
+}
+
+
+.intro {
+  grid-area: intro;
+  font-size: larger;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+img.pic {
+  grid-area: pic;
+  clip-path: circle(48% at center);
+  max-height: 60%;
+  max-width: unset;
+}
+
+.bio {
+  grid-area: bio;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+  max-height: 50px;
+}
+
+.blog-index {
+  display: grid;
+  grid-column: inherit;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  /* grid-template-areas: 
+    "title post-list post-list post-list" */
+}
+
+.blog-index ul {
+  list-style-type: none;
+}
+
+.blog-index a {
+  text-decoration: none;
+}
+
+.blog-index .blog-post-title {
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  text-rendering: optimizeLegibility;
+}
+
+.blog-post-list {
+  grid-column: 2 / 5;
+  display: grid;
+  gap: 10px;
+  line-height: 1.2rem;
+}
+
+.blog-post-card p {
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+}
+
+.blog-post-title {
+  margin-bottom: 10px;
+  color: var(--primary-colour);
+}
+
+.blog-tag, .blog-tag:visited {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--primary-colour);
+  padding: 3px 7px;
+  border: 2px solid;
+  border-radius: 20px;
+  box-shadow: none;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-transform: capitalize;
+}
+
+.blog-tag:hover, .blog-tag:focus {
+  color: #fff;
+  background-color: var(--primary-colour);
+  border-color: var(--primary-colour);
+}
+
+.blog-post-container {
+  line-height: 1.75;
+  max-width: 640px;
+  
+}
+
+.previous-next-continer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.footnote-definition-label {
+  font-size: large;
+  top: 50px !important;
+}
+
+.footnote-definition-label::after {
+  display: inline;
+  content: "⋆";
+  position: absolute;
+  font-size: 200%;
+}
+
+.footnote-definition {
+  line-height: 1rem;
+  display: grid;
+  grid-template-columns: 20px auto 10px;
+  column-gap: 10px;
+}
+
+.footnote-definition p{
+  display: inline;
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    display: block;
+  }
+  .main-home {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "intro"
+      "bio";
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .bio {
+    grid-column-start: 1 !important;
+    grid-column-end: 7 !important;
+  }
+  .blog-index {
+    display: block;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  
+}
+
+
+.hourglass {
+  position: relative;
+  font-size: 300%;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.hourglass::before, .hourglass::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '⌛';
+  animation: rotateHourglass 2s 3s forwards infinite, changeHourglass 2s 3s forwards infinite;
+  display: inline-block;
+}
+
+.hourglass::after {
+  content: '⏳';
+  opacity: 0;
+  animation: showNonEmptyHourglass 2s 3s forwards infinite; /* Delayed start */
+}
+
+@keyframes rotateHourglass {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(180deg);
+  }
+}
+
+@keyframes changeHourglass {
+  0%, 25%, 80% {
+      opacity: 1;
+      top: 0;
+  }
+  100% {
+      opacity: 0;
+      top: -2px;
+  }
+}
+
+@keyframes showNonEmptyHourglass {
+  0%, 25%, 75% {
+      opacity: 0;
+      top: 0;
+  }
+  100% {
+      opacity: 1;
+      top: 2px;
+  }
+}
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+  </style>
+
+  </head>
+
+<body>
+  <header>
+  <a href="https:&#x2F;&#x2F;arjun.ninja" class="title">
+    <h2>Aℳ☺︎</h2>
+  </a>
+  <nav>
+    <a href="https:&#x2F;&#x2F;arjun.ninja">Home</a>
+      <a href="https://arjun.ninja/blog/">&#x2F;Blog</a>
+  </nav>
+</header>
+<main>
+    
+<div class="blog-post-container">
+    <h1 class="blog-post-title">Using a Work Journal</h1>
+    <small class="subtitle">
+        <time datetime=' 2020-04-24T00:00:00+00:00' pubdate>24 Apr, 2020</time></small>
+    <div class="blog-post-content">
+        <p>Since early last year, I’ve started maintaining a work journal, a simple markdown file to keep track of my work throughout the day. </p>
+<span id="continue-reading"></span>
+<p>It helps when I write out my thoughts, to decide if they actually make sense, and flesh out ideas.</p>
+<p>I’ve created a simple bash script to reduce the effort it takes to create a new log entry and make it as easy as entering a word.</p>
+<p>It automatically creates a file for that day, if it is not yet created, or gets that day’s file if it exists, and then opens up Vim editor with the current timestamp and in insert mode!</p>
+<p>If you think it might he helpful to you, check it out:</p>
+<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffffff;">homedir</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">&quot;/home/arjun/worklog/&quot;
+</span><span style="color:#ffffff;">filename</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">$(</span><span style="color:#50fa7b;">date</span><span style="color:#f1fa8c;"> +%</span><span style="color:#ffffff;">Y</span><span style="color:#f1fa8c;">-%</span><span style="color:#ffffff;">m</span><span style="color:#f1fa8c;">-%</span><span style="color:#ffffff;">d</span><span style="color:#f1fa8c;">)&quot;.md&quot;
+</span><span style="color:#ffffff;">title</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">$(</span><span style="color:#50fa7b;">date</span><span style="color:#f1fa8c;"> +%</span><span style="color:#ffffff;">A</span><span style="color:#f1fa8c;">,</span><span style="color:#ff79c6;">\ </span><span style="color:#f1fa8c;">%</span><span style="color:#ffffff;">b</span><span style="color:#ff79c6;">\ </span><span style="color:#f1fa8c;">%</span><span style="color:#ffffff;">d</span><span style="color:#ff79c6;">\ </span><span style="color:#f1fa8c;">%</span><span style="color:#ffffff;">Y</span><span style="color:#f1fa8c;">)
+</span><span> 
+</span><span style="color:#8be9fd;">cd </span><span>$</span><span style="color:#ffffff;">homedir
+</span><span> 
+</span><span style="color:#ff79c6;">if </span><span style="color:#8be9fd;">[ </span><span style="font-style:italic;color:#ffb86c;">-e </span><span>$</span><span style="color:#ffffff;">filename </span><span style="color:#8be9fd;">]</span><span style="color:#ff79c6;">; then
+</span><span>  </span><span style="color:#ffffff;">file_exists</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">true
+</span><span style="color:#ff79c6;">else
+</span><span>  </span><span style="color:#8be9fd;">echo </span><span style="color:#f1fa8c;">&quot;# &quot;</span><span>$</span><span style="color:#ffffff;">title </span><span style="color:#ff79c6;">&gt; </span><span>$</span><span style="color:#ffffff;">filename
+</span><span>  </span><span style="color:#ffffff;">file_exists</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">false
+</span><span style="color:#ff79c6;">fi
+</span><span> 
+</span><span style="color:#ffffff;">newline_gap</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">&#39;&#39;
+</span><span style="color:#ff79c6;">if </span><span style="color:#8be9fd;">[ </span><span>$</span><span style="color:#ffffff;">file_exists </span><span style="color:#8be9fd;">]</span><span style="color:#ff79c6;">; then
+</span><span>  </span><span style="color:#ffffff;">newline_gap</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">&quot;\n\n&quot;
+</span><span style="color:#ff79c6;">fi
+</span><span style="color:#8be9fd;">echo </span><span>$</span><span style="color:#ffffff;">newline_gap</span><span style="color:#f1fa8c;">&quot;## &quot;</span><span>$(</span><span style="color:#50fa7b;">date</span><span> +%</span><span style="color:#ffffff;">r</span><span>)</span><span style="color:#f1fa8c;">&quot;\n- &quot; </span><span style="color:#ff79c6;">&gt;&gt; </span><span>$</span><span style="color:#ffffff;">filename
+</span><span style="color:#50fa7b;">vim </span><span style="color:#f1fa8c;">&#39;+ normal GA&#39;</span><span style="font-style:italic;color:#ffb86c;"> -c </span><span style="color:#f1fa8c;">&#39;startinsert&#39; </span><span>$</span><span style="color:#ffffff;">filename
+</span><span style="color:#8be9fd;">printf </span><span style="color:#f1fa8c;">&quot;\033c&quot;
+</span><span style="color:#50fa7b;">fortune </span><span style="color:#ff79c6;">| </span><span style="color:#50fa7b;">pokemonsay
+</span></code></pre>
+<p>Don’t forget to add an alias:</p>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>$ worklog=&#39;sh ~/worklog/create-log.sh&#39;
+</span></code></pre>
+<p>It is then as simple as typing <code>worklog</code>:</p>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>$ worklog
+</span></code></pre>
+<p>You will then see Vim editor opened up, nicely formatted, and in insert mode:
+<img src="https://user-images.githubusercontent.com/6116387/80232950-58f47c00-8673-11ea-8a63-d574d236d522.png" alt="screenshot" /></p>
+
+    </div>
+    <hr>
+    <p> Tags:
+        <a href="https://arjun.ninja/tags/programming/" class="blog-tag">#programming</a>
+        <a href="https://arjun.ninja/tags/howto/" class="blog-tag">#howto</a>
+        <a href="https://arjun.ninja/tags/productivity/" class="blog-tag">#productivity</a>
+        <a href="https://arjun.ninja/tags/vim/" class="blog-tag">#vim</a>
+    </p>
+</div>
+<!-- <div class="previous-next-continer">
+    <div class="previous-post-container">
+        <span><i><small>Previous Post:</small></i></span><a href="https://arjun.ninja/blog/2019-in-review/" class="blog-post-link">
+            <p class="blog-post-title">
+                2019 In Review
+            </p>
+            <small>
+                <time datetime=' 2020-04-24T00:00:00+00:00' pubdate>24 Apr, 2020</time>
+            </small>
+        </a>
+    </div>
+    <div class="next-post-container">
+        <span><i><small>Next Post:</small></i></span>
+    </div>
+</div> -->
+
+</main>
+  <footer>
+    <p class="hourglass"></p><br>
+  <small
+    >Thank you for visiting! 💜<br />
+    This website is built with
+    <a href="https://www.getzola.org/">Zola</a> and hosted on
+    <a href="https://github.com/arjunnn/arjunnn.github.io">GitHub</a>
+  </small>
+</footer>
+</body>
+<script>
+  const FNDEF = "footnote-definition";
+  const FNREF = "footnote-reference";
+  document.addEventListener("DOMContentLoaded", function () {
+    let images = document.querySelectorAll('img, video');
+    images.forEach(function (img) {
+      let caption = document.createElement('figcaption');
+      caption.textContent = (img.title || img.alt);
+      img.parentNode.insertBefore(caption, img.nextSibling);
+    });
+    let footnote_refs = document.querySelectorAll(`.${FNREF}`)
+    footnote_refs.forEach(function (ref) {
+      ref.firstChild.id = `${FNREF}-${ref.firstChild.textContent}`;
+    });
+    let footnote_defs = document.querySelectorAll(`.${FNDEF}`);
+    footnote_defs.forEach(function (def) {
+      let backref = document.createElement('a');
+      backref.setAttribute('href', `#${FNREF}-${def.id}`);
+      backref.textContent = "↩";
+      backref.style.marginLeft = "5px";
+      // def.insertBefore(backref, def.firstChild.nextSibling);
+      console.log(backref)
+      def.children[1].appendChild(backref);
+    });
+  });
+
+</script>
+
+</html>

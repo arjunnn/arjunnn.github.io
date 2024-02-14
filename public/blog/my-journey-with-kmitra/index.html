@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="&#x2F;favicon.png"><title title="AM☺︎">Aℳ☺︎</title>
+  <meta name="title" content="My Journey With kMITRA">
+<meta name="description" content="" />
+
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <style>
+    :root {
+  --primary-colour: #d13c57;
+}
+
+img, video {
+  max-width: 90%;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: smaller;
+  font-family: monospace;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+
+pre {
+  overflow: scroll;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+body {
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+  /* min-height: 100vh; */
+  /* background-color: rgb(229 225 233); */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:  100px auto auto;
+  grid-template-areas: 
+    "header header header header header header"
+    ".    main   main   main   main   ."
+    "footer footer footer footer footer footer";
+  gap: 5px;
+  min-height: 80vh;
+
+}
+
+body a:visited, body a {
+  color: inherit;
+}
+
+header {
+  grid-area: header;
+  justify-self: stretch;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-areas: "logo nav";
+  max-height: 97px;
+
+}
+
+header a {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: inherit;
+  padding: 5px 10px 5px 10px;
+  margin: 0 10px 0 10px;
+  
+}
+
+header a:visited {
+  color: initial;
+}
+
+footer {
+  text-align: center;
+  grid-area: footer;
+  align-self: end;
+  justify-self: stretch;
+}
+
+main {
+  grid-area: main;
+  /* display: grid; */
+  /* place-content: baseline; */
+  /* grid-template-columns: repeat(6, 1fr); */
+  max-width: 800px;
+  justify-self: center;
+}
+
+.main-home {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    ". intro intro pic pic ."
+    "bio bio bio bio bio bio";
+  align-items: center;
+  justify-items: center;
+  font-size: 1.2rem;
+  /* color: rgb(74, 70, 70); */
+  align-content: center;
+  grid-column: inherit;
+}
+
+
+.intro {
+  grid-area: intro;
+  font-size: larger;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+img.pic {
+  grid-area: pic;
+  clip-path: circle(48% at center);
+  max-height: 60%;
+  max-width: unset;
+}
+
+.bio {
+  grid-area: bio;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+  max-height: 50px;
+}
+
+.blog-index {
+  display: grid;
+  grid-column: inherit;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  /* grid-template-areas: 
+    "title post-list post-list post-list" */
+}
+
+.blog-index ul {
+  list-style-type: none;
+}
+
+.blog-index a {
+  text-decoration: none;
+}
+
+.blog-index .blog-post-title {
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  text-rendering: optimizeLegibility;
+}
+
+.blog-post-list {
+  grid-column: 2 / 5;
+  display: grid;
+  gap: 10px;
+  line-height: 1.2rem;
+}
+
+.blog-post-card p {
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+}
+
+.blog-post-title {
+  margin-bottom: 10px;
+  color: var(--primary-colour);
+}
+
+.blog-tag, .blog-tag:visited {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--primary-colour);
+  padding: 3px 7px;
+  border: 2px solid;
+  border-radius: 20px;
+  box-shadow: none;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-transform: capitalize;
+}
+
+.blog-tag:hover, .blog-tag:focus {
+  color: #fff;
+  background-color: var(--primary-colour);
+  border-color: var(--primary-colour);
+}
+
+.blog-post-container {
+  line-height: 1.75;
+  max-width: 640px;
+  
+}
+
+.previous-next-continer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.footnote-definition-label {
+  font-size: large;
+  top: 50px !important;
+}
+
+.footnote-definition-label::after {
+  display: inline;
+  content: "⋆";
+  position: absolute;
+  font-size: 200%;
+}
+
+.footnote-definition {
+  line-height: 1rem;
+  display: grid;
+  grid-template-columns: 20px auto 10px;
+  column-gap: 10px;
+}
+
+.footnote-definition p{
+  display: inline;
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    display: block;
+  }
+  .main-home {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "intro"
+      "bio";
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .bio {
+    grid-column-start: 1 !important;
+    grid-column-end: 7 !important;
+  }
+  .blog-index {
+    display: block;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  
+}
+
+
+.hourglass {
+  position: relative;
+  font-size: 300%;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.hourglass::before, .hourglass::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '⌛';
+  animation: rotateHourglass 2s 3s forwards infinite, changeHourglass 2s 3s forwards infinite;
+  display: inline-block;
+}
+
+.hourglass::after {
+  content: '⏳';
+  opacity: 0;
+  animation: showNonEmptyHourglass 2s 3s forwards infinite; /* Delayed start */
+}
+
+@keyframes rotateHourglass {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(180deg);
+  }
+}
+
+@keyframes changeHourglass {
+  0%, 25%, 80% {
+      opacity: 1;
+      top: 0;
+  }
+  100% {
+      opacity: 0;
+      top: -2px;
+  }
+}
+
+@keyframes showNonEmptyHourglass {
+  0%, 25%, 75% {
+      opacity: 0;
+      top: 0;
+  }
+  100% {
+      opacity: 1;
+      top: 2px;
+  }
+}
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+  </style>
+
+  </head>
+
+<body>
+  <header>
+  <a href="https:&#x2F;&#x2F;arjun.ninja" class="title">
+    <h2>Aℳ☺︎</h2>
+  </a>
+  <nav>
+    <a href="https:&#x2F;&#x2F;arjun.ninja">Home</a>
+      <a href="https://arjun.ninja/blog/">&#x2F;Blog</a>
+  </nav>
+</header>
+<main>
+    
+<div class="blog-post-container">
+    <h1 class="blog-post-title">My Journey With kMITRA</h1>
+    <small class="subtitle">
+        <time datetime=' 2015-06-23T00:00:00+00:00' pubdate>23 Jun, 2015</time></small>
+    <div class="blog-post-content">
+        <p><img src="/images/photo-1445882679958-91991ef6832f.jpg" alt="journey" /></p>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>kMITRA is a student-run monthly magazine by the students of <a href="http://kmit.in/">KMIT</a>.
+The magazine aspires to cover and inform readers about science, culture, art, technology, and issues relevant to the student commmunity, in a coherent manner. <a href="http://kmit.in/emagazine">http://kmit.in/emagazine</a></p>
+<p>I am the developer and designer of kMITRA, something I really enjoy dedicating my time to. Here’s a brief overview and history of the website from a technical standpoint.</p>
+<!-- >This is how we *roll* &nbsp; :information_desk_person: -->
+<h4 id="the-logo"><strong>The Logo:</strong></h4>
+<p><img src="/images/kmitra-logo.png" alt="kmitra logo" /></p>
+<h2 id="back-end"><strong>Back-End</strong></h2>
+<p>The website runs on the <a href="https://wordpress.org">WordPress</a> platform.
+We chose WordPress as our back-end because we believe in the future of WordPress, as a simple, community driven, scalable, and endlessly extensible publishing platform.
+More than <strong>71 million</strong> people can’t be wrong. Also because it’s free, lol. </p>
+<!-- :laughing: -->
+<h2 id="content"><strong>Content</strong></h2>
+<p>Most of the content, such as text and images is hosted on KMIT’s own webservers, organized and indexed by the WordPress CMS(Content Management System).
+Videos, however, are hosted on our <a href="https://www.youtube.com/channel/UCVy33lRaRxA8ACd-QU2Gumw">YouTube channel</a>.
+Newsletters are distributed to subscribers in bulk via a <a href="https://mailchimp.com/">Mailchimp</a> server.</p>
+<h2 id="baby-steps"><strong>Baby Steps</strong></h2>
+<h4 id="plugins"><strong>Plugins</strong></h4>
+<p>kMITRA was required to be a periodical magazine, with new issues every month.
+By default, WordPress does not provide management functionality for periodicals.
+After days of head scratching, we finally found a <a href="https://wordpress.org/plugins/issuem/">plugin</a> that provided a basic structure for handling issue-based publications within WordPress.
+This meant that I did not have to start coding from scratch. A few custom functions later, we were satisfied with its functionality.</p>
+<h4 id="design"><strong>Design</strong></h4>
+<p>We then moved on to design. While deciding the font, we were looking for type that had excellent legibility and was optimized for all screen sizes;
+so we chose the <a href="https://www.google.com/fonts/specimen/Open+Sans">Open Sans</a> typeface for all the text and <a href="https://www.google.com/fonts/specimen/Playfair+Display">Playfair Display</a> typeface for bold, eye-catching Headlines.</p>
+<h4 id="layout"><strong>Layout</strong></h4>
+<p>The layout or UI is the first thing a reader notices when looking at a website. We needed something elegant and functional for kMITRA, with generous use of negative space to let the user focus on the actual content. It was fairly easy to achieve the desired look of the website using a base theme and custom CSS.</p>
+<h4 id="migration"><strong>Migration</strong></h4>
+<p>Since the old magazine, Vipasana, was located at <code>kmit.in/newsletter</code> for a long time, search engines such as google provided links for Vipasana articles using the old URL. This lead to a number of <code>404: NOT FOUND</code> error messages.
+I handled these requests by modifying the <code>.htaccess</code> file of KMIT’s Apache server to include <code>HTTP 301</code> redirects.</p>
+<h5 id="example"><strong>example:</strong></h5>
+<pre data-lang="apacheconfig" style="background-color:#282a36;color:#f8f8f2;" class="language-apacheconfig "><code class="language-apacheconfig" data-lang="apacheconfig"><span>RedirectMatch 301 /newsletter/(.*) http://kmit.in/emagazine/$1
+</span><span>RedirectMatch 301 /kmitra http://kmit.in/emagazine/
+</span></code></pre>
+<h2 id="reception"><strong>Reception</strong></h2>
+<p>kMITRA launched on 22nd October last year, with only a Facebook <a href="https://facebook.com/kmitrakmit">page</a> for publicity.
+The response was, and continues to be tremendous. It has exceeded all of our expectations.
+The entire team of kMITRA is overjoyed.
+The dedication of our readers gives us immense hope for the future of the magazine and a sense of responsibility towards delivering quality and engaging content.</p>
+<h4 id="here-are-some-stats"><strong>Here are some stats:</strong></h4>
+<p><img src="/images/kmitra-stats.jpg" alt="kMITRA Stats" /></p>
+<blockquote>
+<p>Note: These numbers are from Feb-Jun 2015 only. That’s when we started collecting data.</p>
+</blockquote>
+<h2 id="lessons-learnt"><strong>Lessons Learnt</strong></h2>
+<p>Developing kMITRA has taught me a great deal about the technologies behind it. I now see how exhilarating solving problems can be. It has helped me communicate better with my team and put forward my ideas and views in a coherent manner.</p>
+<p>Additionally, I designed covers for some of the issues.</p>
+<p>One of my most memorable assignments was creating a special <a href="http://kmit.in/emagazine/oscars/">page</a> for kMITRA’s coverage of Oscars 2015.</p>
+<table><thead><tr><th>Issue 1</th><th>Issue 2</th><th>Issue 3</th><th>Issue 4</th></tr></thead><tbody>
+<tr><td><img src="https://raw.githubusercontent.com/arjunnn/kmitemag/master/All%20Logos/issue4.png" alt="issue-1-cover" /></td><td><img src="https://raw.githubusercontent.com/arjunnn/kmitemag/master/All%20Logos/issue4new.png" alt="issue-2-cover" /></td><td><img src="https://raw.githubusercontent.com/arjunnn/kmitemag/master/All%20Logos/issue5.png" alt="issue-3-cover" /></td><td><img src="https://raw.githubusercontent.com/arjunnn/kmitemag/master/All%20Logos/issue6.png" alt="issue-4-cover" /></td></tr>
+</tbody></table>
+<p>I look forward to continue contributing to the magazine during my final year at KMIT.</p>
+<h2 id="technologies-used"><strong>Technologies used</strong></h2>
+<h4 id="front-end"><strong>Front-End</strong></h4>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+<h4 id="back-end-1"><strong>Back-End</strong></h4>
+<ul>
+<li>PHP</li>
+<li>Apache HTTP Server</li>
+<li>WordPress CMS/CDN</li>
+</ul>
+<p>Thanks for reading :)</p>
+<p><img src="/images/thatsallfolks.gif" alt="That’s All Folks!" /></p>
+<p><em>until next time..</em></p>
+
+    </div>
+    <hr>
+    <p> Tags:
+        <a href="https://arjun.ninja/tags/kmitra/" class="blog-tag">#kmitra</a>
+        <a href="https://arjun.ninja/tags/college/" class="blog-tag">#college</a>
+        <a href="https://arjun.ninja/tags/kmit/" class="blog-tag">#kmit</a>
+    </p>
+</div>
+<!-- <div class="previous-next-continer">
+    <div class="previous-post-container">
+        <span><i><small>Previous Post:</small></i></span><a href="https://arjun.ninja/blog/diskpart-saves-the-day/" class="blog-post-link">
+            <p class="blog-post-title">
+                DISKPART saves the day
+            </p>
+            <small>
+                <time datetime=' 2015-11-06T00:00:00+00:00' pubdate>06 Nov, 2015</time>
+            </small>
+        </a>
+    </div>
+    <div class="next-post-container">
+        <span><i><small>Next Post:</small></i></span>
+    </div>
+</div> -->
+
+</main>
+  <footer>
+    <p class="hourglass"></p><br>
+  <small
+    >Thank you for visiting! 💜<br />
+    This website is built with
+    <a href="https://www.getzola.org/">Zola</a> and hosted on
+    <a href="https://github.com/arjunnn/arjunnn.github.io">GitHub</a>
+  </small>
+</footer>
+</body>
+<script>
+  const FNDEF = "footnote-definition";
+  const FNREF = "footnote-reference";
+  document.addEventListener("DOMContentLoaded", function () {
+    let images = document.querySelectorAll('img, video');
+    images.forEach(function (img) {
+      let caption = document.createElement('figcaption');
+      caption.textContent = (img.title || img.alt);
+      img.parentNode.insertBefore(caption, img.nextSibling);
+    });
+    let footnote_refs = document.querySelectorAll(`.${FNREF}`)
+    footnote_refs.forEach(function (ref) {
+      ref.firstChild.id = `${FNREF}-${ref.firstChild.textContent}`;
+    });
+    let footnote_defs = document.querySelectorAll(`.${FNDEF}`);
+    footnote_defs.forEach(function (def) {
+      let backref = document.createElement('a');
+      backref.setAttribute('href', `#${FNREF}-${def.id}`);
+      backref.textContent = "↩";
+      backref.style.marginLeft = "5px";
+      // def.insertBefore(backref, def.firstChild.nextSibling);
+      console.log(backref)
+      def.children[1].appendChild(backref);
+    });
+  });
+
+</script>
+
+</html>

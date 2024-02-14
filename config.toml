@@ -1,0 +1,37 @@
+# The URL the site will be built for
+base_url = "https://arjun.ninja"
+
+title = "Aℳ☺︎"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+theme = "zola-bearblog"
+
+taxonomies = [
+    { name = "categories", feed = true, render = true},
+    { name = "tags", feed = true, render = true },
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "dracula"
+render_emoji = true
+smart_punctuation = true
+
+[extra]
+date_format = "%d %b, %Y"
+favicon = "/favicon.png"
+
+
+[[extra.main_menu]]
+name = "/Blog"
+url = "@/blog/_index.md"
+
+
+[[extra.gzz]]
+name = "/Uses"
+url = "@/uses/_index.md"

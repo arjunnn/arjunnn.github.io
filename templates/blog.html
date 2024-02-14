@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block main %}
+<div class="blog-index">
+    <div class="blog-title">
+        <h1>{{ section.title }} </h1>
+        <small>read: <i>ramblings</i></small>
+    </div>
+    <ul class="blog-post-list">
+        {% for page in section.pages %}
+        <li class="blog-post-card"><a href="{{ page.permalink | safe }}" class="blog-post-link">
+                <h2 class="blog-post-title">
+                    {{ page.title }}
+                </h2>
+
+                <small>
+                    <time datetime='{{ page.date | date(format=' %+') }}' pubdate>
+                        {{- page.date | date(format=config.extra.date_format) -}}
+                    </time>
+                </small>
+                {{ page.summary | safe }}
+            </a>
+            <p>
+                {%- if page.taxonomies %} {%- for name, taxon in page.taxonomies %} {{ name
+                | capitalize }}: {%- for item in taxon %}
+                <a href="{{ get_taxonomy_url(kind=name, name=item) }}" class="blog-tag">{{ item }}</a>
+                {%- endfor %} {%- endfor %} {%- endif %}
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock main %}

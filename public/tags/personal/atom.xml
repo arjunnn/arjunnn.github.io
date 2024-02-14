@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Aℳ☺︎ - personal</title>
+    <link rel="self" type="application/atom+xml" href="https://arjun.ninja/tags/personal/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://arjun.ninja"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-04-24T00:00:00+00:00</updated>
+    <id>https://arjun.ninja/tags/personal/atom.xml</id>
+    <entry xml:lang="en">
+        <title>2019 In Review</title>
+        <published>2020-04-24T00:00:00+00:00</published>
+        <updated>2020-04-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://arjun.ninja/blog/2019-in-review/"/>
+        <id>https://arjun.ninja/blog/2019-in-review/</id>
+        
+        <summary type="html">&lt;p&gt;Continuing my tradition of yearly reviews of well, years, here’s a reflection my life in 2019.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Running A Marathon</title>
+        <published>2019-12-09T00:00:00+00:00</published>
+        <updated>2019-12-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://arjun.ninja/blog/running-a-marathon/"/>
+        <id>https://arjun.ninja/blog/running-a-marathon/</id>
+        
+        <summary type="html">&lt;p&gt;Well, not really a marathon, but a 10K&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2018 In Review</title>
+        <published>2019-01-05T00:00:00+00:00</published>
+        <updated>2019-01-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://arjun.ninja/blog/2018-in-review/"/>
+        <id>https://arjun.ninja/blog/2018-in-review/</id>
+        
+        <summary type="html">&lt;p&gt;I’ve always wanted to do an ‘year in review’ kinda post to help me reflect upon the year passed and see how it has affected me.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

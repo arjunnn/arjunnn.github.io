@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Aℳ☺︎ - javascript</title>
+    <link rel="self" type="application/atom+xml" href="https://arjun.ninja/tags/javascript/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://arjun.ninja"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-04-16T00:00:00+00:00</updated>
+    <id>https://arjun.ninja/tags/javascript/atom.xml</id>
+    <entry xml:lang="en">
+        <title>How I Built Sketch</title>
+        <published>2017-04-16T00:00:00+00:00</published>
+        <updated>2017-04-16T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://arjun.ninja/blog/how-i-built-sketch/"/>
+        <id>https://arjun.ninja/blog/how-i-built-sketch/</id>
+        
+        <summary type="html">&lt;p&gt;Over the last week, I built a fun™ and cool™ web app to draw doodles and simple drawings.
+I appropriately named it &lt;strong&gt;Sketch&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Jadoo</title>
+        <published>2016-12-15T00:00:00+00:00</published>
+        <updated>2016-12-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://arjun.ninja/blog/jadoo/"/>
+        <id>https://arjun.ninja/blog/jadoo/</id>
+        
+        <summary type="html">&lt;p&gt;When I saw &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Koi..._Mil_Gaya&quot;&gt;Koi Mil Gaya&lt;&#x2F;a&gt;&lt;&#x2F;em&gt; for the first time in 2003, it quickly became one of my favourite movies.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

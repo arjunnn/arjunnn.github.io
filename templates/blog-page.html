@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block main %}
+<div class="blog-post-container">
+    <h1 class="blog-post-title">{{ page.title }}</h1>
+    <small class="subtitle">
+        <time datetime='{{ page.date | date(format=' %+') }}' pubdate>
+            {{- page.date | date(format=config.extra.date_format) -}}
+        </time></small>
+    <div class="blog-post-content">
+        {{ page.content | safe }}
+    </div>
+    <hr>
+    <p>
+        {%- if page.taxonomies %} {%- for name, taxon in page.taxonomies %} {{ name
+        | capitalize }}: {%- for item in taxon %}
+        <a href="{{ get_taxonomy_url(kind=name, name=item) }}" class="blog-tag">#{{ item }}</a>
+        {%- endfor %} {%- endfor %} {%- endif %}
+    </p>
+</div>
+<!-- <div class="previous-next-continer">
+    <div class="previous-post-container">
+        <span><i><small>Previous Post:</small></i></span>
+        {%- if page.lower -%}
+        <a href="{{ page.lower.permalink | safe }}" class="blog-post-link">
+            <p class="blog-post-title">
+                {{ page.lower.title }}
+            </p>
+            <small>
+                <time datetime='{{ page.lower.date | date(format=' %+') }}' pubdate>
+                    {{- page.lower.date | date(format=config.extra.date_format) -}}
+                </time>
+            </small>
+        </a>
+        {%- endif %}
+    </div>
+    <div class="next-post-container">
+        <span><i><small>Next Post:</small></i></span>
+        {%- if page.upper -%}
+        <a href="{{ page.upper.permalink | safe }}" class="blog-post-link">
+            <p class="blog-post-title">
+                {{ page.upper.title }}
+            </p>
+
+            <small>
+                <time datetime='{{ page.upper.date | date(format=' %+') }}' pubdate>
+                    {{- page.upper.date | date(format=config.extra.date_format) -}}
+                </time>
+            </small>
+        </a>
+        {%- endif %}
+    </div>
+</div> -->
+
+{% endblock main %}

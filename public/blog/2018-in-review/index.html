@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="&#x2F;favicon.png"><title title="AM☺︎">Aℳ☺︎</title>
+  <meta name="title" content="2018 In Review">
+<meta name="description" content="" />
+
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <style>
+    :root {
+  --primary-colour: #d13c57;
+}
+
+img, video {
+  max-width: 90%;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: smaller;
+  font-family: monospace;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+
+pre {
+  overflow: scroll;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+body {
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+  /* min-height: 100vh; */
+  /* background-color: rgb(229 225 233); */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:  100px auto auto;
+  grid-template-areas: 
+    "header header header header header header"
+    ".    main   main   main   main   ."
+    "footer footer footer footer footer footer";
+  gap: 5px;
+  min-height: 80vh;
+
+}
+
+body a:visited, body a {
+  color: inherit;
+}
+
+header {
+  grid-area: header;
+  justify-self: stretch;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-areas: "logo nav";
+  max-height: 97px;
+
+}
+
+header a {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: inherit;
+  padding: 5px 10px 5px 10px;
+  margin: 0 10px 0 10px;
+  
+}
+
+header a:visited {
+  color: initial;
+}
+
+footer {
+  text-align: center;
+  grid-area: footer;
+  align-self: end;
+  justify-self: stretch;
+}
+
+main {
+  grid-area: main;
+  /* display: grid; */
+  /* place-content: baseline; */
+  /* grid-template-columns: repeat(6, 1fr); */
+  max-width: 800px;
+  justify-self: center;
+}
+
+.main-home {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    ". intro intro pic pic ."
+    "bio bio bio bio bio bio";
+  align-items: center;
+  justify-items: center;
+  font-size: 1.2rem;
+  /* color: rgb(74, 70, 70); */
+  align-content: center;
+  grid-column: inherit;
+}
+
+
+.intro {
+  grid-area: intro;
+  font-size: larger;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+img.pic {
+  grid-area: pic;
+  clip-path: circle(48% at center);
+  max-height: 60%;
+  max-width: unset;
+}
+
+.bio {
+  grid-area: bio;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+  max-height: 50px;
+}
+
+.blog-index {
+  display: grid;
+  grid-column: inherit;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  /* grid-template-areas: 
+    "title post-list post-list post-list" */
+}
+
+.blog-index ul {
+  list-style-type: none;
+}
+
+.blog-index a {
+  text-decoration: none;
+}
+
+.blog-index .blog-post-title {
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  text-rendering: optimizeLegibility;
+}
+
+.blog-post-list {
+  grid-column: 2 / 5;
+  display: grid;
+  gap: 10px;
+  line-height: 1.2rem;
+}
+
+.blog-post-card p {
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+}
+
+.blog-post-title {
+  margin-bottom: 10px;
+  color: var(--primary-colour);
+}
+
+.blog-tag, .blog-tag:visited {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--primary-colour);
+  padding: 3px 7px;
+  border: 2px solid;
+  border-radius: 20px;
+  box-shadow: none;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-transform: capitalize;
+}
+
+.blog-tag:hover, .blog-tag:focus {
+  color: #fff;
+  background-color: var(--primary-colour);
+  border-color: var(--primary-colour);
+}
+
+.blog-post-container {
+  line-height: 1.75;
+  max-width: 640px;
+  
+}
+
+.previous-next-continer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.footnote-definition-label {
+  font-size: large;
+  top: 50px !important;
+}
+
+.footnote-definition-label::after {
+  display: inline;
+  content: "⋆";
+  position: absolute;
+  font-size: 200%;
+}
+
+.footnote-definition {
+  line-height: 1rem;
+  display: grid;
+  grid-template-columns: 20px auto 10px;
+  column-gap: 10px;
+}
+
+.footnote-definition p{
+  display: inline;
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    display: block;
+  }
+  .main-home {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "intro"
+      "bio";
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .bio {
+    grid-column-start: 1 !important;
+    grid-column-end: 7 !important;
+  }
+  .blog-index {
+    display: block;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  
+}
+
+
+.hourglass {
+  position: relative;
+  font-size: 300%;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.hourglass::before, .hourglass::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '⌛';
+  animation: rotateHourglass 2s 3s forwards infinite, changeHourglass 2s 3s forwards infinite;
+  display: inline-block;
+}
+
+.hourglass::after {
+  content: '⏳';
+  opacity: 0;
+  animation: showNonEmptyHourglass 2s 3s forwards infinite; /* Delayed start */
+}
+
+@keyframes rotateHourglass {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(180deg);
+  }
+}
+
+@keyframes changeHourglass {
+  0%, 25%, 80% {
+      opacity: 1;
+      top: 0;
+  }
+  100% {
+      opacity: 0;
+      top: -2px;
+  }
+}
+
+@keyframes showNonEmptyHourglass {
+  0%, 25%, 75% {
+      opacity: 0;
+      top: 0;
+  }
+  100% {
+      opacity: 1;
+      top: 2px;
+  }
+}
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+  </style>
+
+  </head>
+
+<body>
+  <header>
+  <a href="https:&#x2F;&#x2F;arjun.ninja" class="title">
+    <h2>Aℳ☺︎</h2>
+  </a>
+  <nav>
+    <a href="https:&#x2F;&#x2F;arjun.ninja">Home</a>
+      <a href="https://arjun.ninja/blog/">&#x2F;Blog</a>
+  </nav>
+</header>
+<main>
+    
+<div class="blog-post-container">
+    <h1 class="blog-post-title">2018 In Review</h1>
+    <small class="subtitle">
+        <time datetime=' 2019-01-05T00:00:00+00:00' pubdate>05 Jan, 2019</time></small>
+    <div class="blog-post-content">
+        <p>I’ve always wanted to do an ‘year in review’ kinda post to help me reflect upon the year passed and see how it has affected me.</p>
+<span id="continue-reading"></span>
+<p>At least it gives me a moment to appreciate all the good that has happened in the past year, and hopefully learn from the mistakes I’ve made.</p>
+<hr />
+<h2 id="work">Work</h2>
+<p>At the end of 2017, I joined MedleyMed
+<sup class="footnote-reference"><a href="#1">1</a></sup>, an e-commerce company as a full-stack product engineer. It has been a great learning curve, given that it is my first real job and that I had to learn Python and Django, the stack the product is based on, from scratch.</p>
+<p>I immediately fell in love with Python — it is a well designed, easy to understand language that is so flexible that a noob developer such as myself can start building apps in no time, and yet powerful enough to be used to solve complex scientific problems. Django felt quirky in the beginning but as I started using it, I realised how mature and fully featured the framework and its ecosystem is. Apart from these two, I also dipped my toes into PostgreSQL 🤞, wrangled with Git 💪, wept over Vim 😫, made peace with Linux 😇, and mastered VSCode 🤓.</p>
+<p>Of course, writing code is only a part of my job. I also had to sit through countless meetings, discussions and demos. I learned how important it is to plan out your work and strategy before writing even a single line of code. I’ve missed a good number of deadlines thanks to my poor planning. Although some of it can be attributed to my sub-par debugging and backtracking skills.<sup class="footnote-reference"><a href="#2">2</a></sup> It is something I want to fix in 2019.</p>
+<p>My coworkers have been super supportive and helpful throughout and the structure of our team is such that often times we solve problems in collaborative, not-quite-pair-programming kinda ways. I also got to mentor a new member of the team for a few weeks. It was super fun, although I feel like I could’ve been more helpful and approachable to my mentee.<sup class="footnote-reference"><a href="#3">3</a></sup></p>
+<hr />
+<h2 id="personal">Personal</h2>
+<p>I took a bunch of bite-sized vacations this year, and it was super fun to break away from work for a few days at a time and return energized. I Collected a ton of happy little memories from all the places — A road trip to Bangalore, a weekend getaway to Pondicherry, a weeklong trip to Delhi, and a day trip to Gulbarga. I realised that I’d been missing out on the fun of travelling and I will make an effort to travel more this year.</p>
+<p>Speaking of efforts, I really made an effort to be in touch with my close friends and spend time hanging out with them. I’m only now beginning to understand the value of deep, meaningful friendships and the effort it takes to foster them. My friends still think I’m not trying hard enough so this year it is going to be a quite a challenge 😅.</p>
+<p>Another effort I made(am making) is to form habits. One of my overarching goals is to be fluent in German by next year.
+So I’m making it a habit to practice the language for 20 minutes every day before bed.
+Similarly, I’m strictly following the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro</a> technique at work since the past few weeks.
+I don’t know what it is about the Human mind and incentive based stimuli, but it has worked wonders for my productivity.<sup class="footnote-reference"><a href="#4">4</a></sup>
+Also, in October last year, I started learning touch typing on a whim. In about 3 months, now my typing speed is ~60 WPM. I’m proud of myself for that, and I’m more amazed by how quickly our muscles can learn, unlearn, and relearn.</p>
+<p>It has not been all sunshine and rainbows for me though. I gained weight and I haven’t exercised in more than a year, except for the occasional cycle rides. That is something I look to improve in 2019.</p>
+<p>Although I didn’t plan on it, I ended up reading a ton of books in the past year. Thanks to my hour-long commute, I have almost a couple of hours every day to pass time. I spend most of that time on my Kindle. I’ll probably write another blog post to share what I read.</p>
+<hr />
+<h3 id="other-stuff-to-look-forward-to-in-2019">Other Stuff to look forward to in 2019</h3>
+<ul>
+<li>
+<p>In the last week of December I finally got around to finishing the React Course I purchased in 2017 (😲, yes I know) and I think it <strong>finally</strong> clicked for me. Just three years later, no biggie 😅. I’ve since been obsessively learning everything I can about React. In fact, I brought this blog back to life just so I could learn Gatsby and remake my blog. So I’m seriously going to use React at work and elsewhere because it is <strong>so</strong> good!</p>
+</li>
+<li>
+<p>More books! I can’t read enough books.<sup class="footnote-reference"><a href="#5">5</a></sup></p>
+</li>
+<li>
+<p>Deliberate choices about time spent in activities, in terms of risk, reward and strength</p>
+</li>
+<li>
+<p>Audit relationships regularly, discuss long-term priorities, issues etc.</p>
+</li>
+<li>
+<p>Ship more stuff, even if it is just MVPs. “Better done than perfect”.</p>
+</li>
+<li>
+<p>Understand how the world works <sup class="footnote-reference"><a href="#6">6</a></sup></p>
+</li>
+<li>
+<p>Making lots of lists <sup class="footnote-reference"><a href="#7">7</a></sup></p>
+</li>
+<li>
+<p>Unlearn and Relearn Math (A man can dream…)</p>
+</li>
+</ul>
+<hr />
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>The product I work on is <a href="https://biz.medleymed.com">https://biz.medleymed.com</a>. It aims to solve really complex logistical and supply-chain problems in the B2B pharmaceutical industry.</p>
+</div>
+<div class="footnote-definition" id="3"><sup class="footnote-definition-label">3</sup>
+<p>I’m still not sure how I feel about this.. I tried to strike a balance between hands off and spoon-feeding, just letting them figure stuff out from clues and pointers. But I do feel guilty idk.</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>I legit spent multiple hours on stupid bugs more times than I’d like to admit</p>
+</div>
+<div class="footnote-definition" id="4"><sup class="footnote-definition-label">4</sup>
+<p>Highly recommend this fun little app if you’re interested in a Pomodoro app: <a href="https://itunes.apple.com/in/app/bft-bear-focus-timer/id1328806990">https://itunes.apple.com/in/app/bft-bear-focus-timer/id1328806990</a></p>
+</div>
+<div class="footnote-definition" id="5"><sup class="footnote-definition-label">5</sup>
+<p><a href="https://twitter.com/ASmallFiction/status/1027790488865107968">https://twitter.com/ASmallFiction/status/1027790488865107968</a></p>
+</div>
+<div class="footnote-definition" id="6"><sup class="footnote-definition-label">6</sup>
+<p><a href="https://twitter.com/jackerhack/status/1040472413039779840">https://twitter.com/jackerhack/status/1040472413039779840</a></p>
+</div>
+<div class="footnote-definition" id="7"><sup class="footnote-definition-label">7</sup>
+<p><a href="https://twitter.com/david_perell/status/1071836429058232320">https://twitter.com/david_perell/status/1071836429058232320</a></p>
+</div>
+
+    </div>
+    <hr>
+    <p> Tags:
+        <a href="https://arjun.ninja/tags/personal/" class="blog-tag">#personal</a>
+        <a href="https://arjun.ninja/tags/year-in-review/" class="blog-tag">#year in review</a>
+    </p>
+</div>
+<!-- <div class="previous-next-continer">
+    <div class="previous-post-container">
+        <span><i><small>Previous Post:</small></i></span><a href="https://arjun.ninja/blog/running-a-marathon/" class="blog-post-link">
+            <p class="blog-post-title">
+                Running A Marathon
+            </p>
+            <small>
+                <time datetime=' 2019-12-09T00:00:00+00:00' pubdate>09 Dec, 2019</time>
+            </small>
+        </a>
+    </div>
+    <div class="next-post-container">
+        <span><i><small>Next Post:</small></i></span>
+    </div>
+</div> -->
+
+</main>
+  <footer>
+    <p class="hourglass"></p><br>
+  <small
+    >Thank you for visiting! 💜<br />
+    This website is built with
+    <a href="https://www.getzola.org/">Zola</a> and hosted on
+    <a href="https://github.com/arjunnn/arjunnn.github.io">GitHub</a>
+  </small>
+</footer>
+</body>
+<script>
+  const FNDEF = "footnote-definition";
+  const FNREF = "footnote-reference";
+  document.addEventListener("DOMContentLoaded", function () {
+    let images = document.querySelectorAll('img, video');
+    images.forEach(function (img) {
+      let caption = document.createElement('figcaption');
+      caption.textContent = (img.title || img.alt);
+      img.parentNode.insertBefore(caption, img.nextSibling);
+    });
+    let footnote_refs = document.querySelectorAll(`.${FNREF}`)
+    footnote_refs.forEach(function (ref) {
+      ref.firstChild.id = `${FNREF}-${ref.firstChild.textContent}`;
+    });
+    let footnote_defs = document.querySelectorAll(`.${FNDEF}`);
+    footnote_defs.forEach(function (def) {
+      let backref = document.createElement('a');
+      backref.setAttribute('href', `#${FNREF}-${def.id}`);
+      backref.textContent = "↩";
+      backref.style.marginLeft = "5px";
+      // def.insertBefore(backref, def.firstChild.nextSibling);
+      console.log(backref)
+      def.children[1].appendChild(backref);
+    });
+  });
+
+</script>
+
+</html>
